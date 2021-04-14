@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
 }
 
 .profile {
@@ -107,7 +108,6 @@
 }
 
 .project-images {
-    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -132,7 +132,7 @@
     }
 
     .main__wrapper__info {
-        width: 40%;
+        width: 60%;
     }
 
     .profile__name {
@@ -155,7 +155,6 @@
 
     .project-images {
         height: 100%;
-        flex-direction: column;
     }
     
     .main__wrapper__info {
@@ -167,16 +166,14 @@
     }
     
     .project-images {
-        padding-left: 0;
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
         overflow-x: unset;
         overflow-y: scroll;
+        width: 40%;
     }
 
     .project-images > picture, .project-images > picture > img {
-        width: 400px;
-        height: 400px;
+        width: 100%;
+        height: auto
     }
 
     .project-images > picture:last-child > img {
