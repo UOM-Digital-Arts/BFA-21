@@ -49,8 +49,6 @@
 .class {
     padding-top: 1rem;
     padding-left: 1rem;
-    display: flex;
-    flex-direction: column;
     overflow-y: auto;
 }
 
@@ -58,7 +56,7 @@
     display: flex;
     justify-content: flex-start;
     position: relative;
-    margin-bottom: 7rem;
+    margin-bottom: 2rem;
 }
 
 .class__student > picture, .class__student > picture > img {
