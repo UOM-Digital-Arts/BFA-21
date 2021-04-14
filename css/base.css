@@ -161,11 +161,32 @@ header {
 }
 
 .marquee > p {
-    transform: translateX(100%);
-    -webkit-animation: scroll-left 8s linear infinite;
-            animation: scroll-left 8s linear infinite;
+    transform: translateX(150%);
+    -webkit-animation: marquee 8s linear infinite;
+            animation: marquee 8s linear infinite;
     position: absolute;
 }
+
+@-webkit-keyframes marquee {
+    0% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
 
 /****** Nav ******/
 
