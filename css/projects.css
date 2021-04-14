@@ -29,7 +29,6 @@ img {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    color: white;
 }
 
 .project-title {
@@ -55,19 +54,6 @@ img {
     display: flex;
     flex-direction: column;
 }
-
-.pink-bg {
-    background-color: var(--pink);
-}
-
-.yellow-bg {
-    background-color: var(--yellow);
-}
-
-.blue-bg {
-    background-color: var(--blue);
-}
-
 
 /************ Breakpoints ************/
 
