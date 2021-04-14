@@ -40,7 +40,6 @@ a.current-link {
     color: var(--link);
 }
 
-
 *,
 ::before,
 ::after {
@@ -88,26 +87,35 @@ body {
     border: 2px solid black;
 }
 
-@media only screen and (min-width: 992px) {
-    .border {
-        border: 5px solid black;
-    }
-
-    .border-noleft {
-        border-left: 0;
-    }
+.border-right {
+    border-right: 2px solid black;
 }
 
 .border-notop {
     border-top: 0;
 }
 
-.border-noright {
-    border-right: 0;
+.border-noleft {
+    border-left: 0;
 }
 
-.border-nobottom {
-    border-bottom: 0;
+.border-top {
+    border-top: 2px solid black;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .border {
+        border-width: 5px;
+    }
+
+    .border-top {
+        border-width: 5px;
+    }
+
+    .border-noleft-l {
+        border-left: 0;
+    }
 }
 
 p {
@@ -143,13 +151,11 @@ header {
 }
 
 #marquee {
-    border-left: 0;
     flex: 1 1 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.65rem;
-    padding: 1rem;
     font-family: 'Gopher-Bold';
     text-align: center;
     color: white;
@@ -192,8 +198,6 @@ header {
 
 nav {
     height: 30px;
-    padding-left: 1rem;
-    padding-right: 1rem;
     flex-shrink: 0;
     display: flex;
     display: grid;
@@ -261,7 +265,6 @@ main {
     nav > ul {
         flex-direction: column;
         height: 100%;
-        border-bottom: 0;
         justify-content: start;
         padding-top: var(--spacing);
     }
@@ -297,6 +300,7 @@ main {
         width: 300px;
         flex: 0 1 300px;
         font-size: 2rem;
+        padding: 0;
     }
 
     #marquee {
@@ -313,7 +317,6 @@ main {
     nav > ul {
         flex-direction: column;
         height: 100%;
-        border-bottom: 0;
         justify-content: start;
     }
 
