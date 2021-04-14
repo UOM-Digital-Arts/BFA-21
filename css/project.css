@@ -60,7 +60,7 @@
 
 .profile__name {
     margin-left: 1rem;
-    font-family: 'Gopher';
+    font-family: 'Gopher-Bold';
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -74,7 +74,7 @@
 }
 
 .project__title {
-    font-family: 'Gopher';
+    font-family: 'Gopher-Bold';
     font-weight: bold;
     padding-right: 2rem;
     font-size: 1.1rem;
