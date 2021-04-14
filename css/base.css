@@ -159,7 +159,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.65rem;
+    font-size: 0.5rem;
     font-family: 'Gopher-Bold';
     text-align: center;
     color: white;
@@ -171,29 +171,30 @@ header {
 }
 
 .marquee > p {
-    transform: translateX(150%);
+    transform: translateX(100%);
     -webkit-animation: marquee 15s linear infinite;
             animation: marquee 15s linear infinite;
     position: absolute;
+    right: 0;
 }
 
 @-webkit-keyframes marquee {
     0% {
-        transform: translateX(170%);
+        transform: translateX(100%);
     }
 
     100% {
-        transform: translateX(-170%);
+        transform: translateX(-300%);
     }
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(170%);
+        transform: translateX(100%);
     }
 
     100% {
-        transform: translateX(-170%);
+        transform: translateX(-300%);
     }
 }
 
@@ -247,6 +248,32 @@ main {
 }
 /* iPad, Landscape Mode, and HD Monitors */
 @media only screen and (min-width: 992px) {
+
+    .marquee > p {
+        -webkit-animation: marquee 25s linear infinite;
+                animation: marquee 25s linear infinite;
+    }
+
+    @-webkit-keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+    
+        100% {
+            transform: translateX(-400%);
+        }
+    }
+    
+    @keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+    
+        100% {
+            transform: translateX(-400%);
+        }
+    }
+    
 
     body {
         display: grid;
