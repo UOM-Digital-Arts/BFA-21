@@ -161,18 +161,10 @@ header {
 }
 
 .marquee > p {
-    -moz-transform: translateX(100%);
-    -moz-animation: scroll-left 8s linear infinite;
+    transform: translateX(100%);
+    -webkit-animation: scroll-left 8s linear infinite;
+            animation: scroll-left 8s linear infinite;
     position: absolute;
-}
-
-@-moz-keyframes scroll-left {
-    0% {
-        -moz-transform: translateX(150%);
-    }
-    100% {
-        -moz-transform: translateX(-150%);
-    }
 }
 
 /****** Nav ******/
