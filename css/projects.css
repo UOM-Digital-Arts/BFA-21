@@ -1,0 +1,144 @@
+/************ Projects ************/
+
+main {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 2rem;
+    align-content: start;
+}
+
+.project-img {
+    height: 120px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+}
+
+.project-title {
+    font-family: 'Gopher-Bold';
+    font-size: 0.875em;
+}
+
+.project-tag {
+    font-size: 0.65rem;
+}
+
+.project-student {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/************ Breakpoints ************/
+
+/* iPad and HD Monitors */
+@media only screen and (min-width: 992px) {
+
+    /* Update Projects Page to Display 2 Projects per Row */
+
+    .project-img {
+        height: 300px;
+    }
+    
+    .spacer {
+        display: none;
+    }
+
+    /* Update Projects Page to Display 4 Projects per Row */
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2.5rem;
+        padding: 2.5rem;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+        height: 2rem;
+    }
+
+    .project-info {
+        background: black;
+        color: white;
+        padding: 1rem;
+    }
+
+    .project-tag {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .project-student {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .project-img {
+        height: 230px;
+    }
+
+    .pink-bg {
+        background-color: var(--pink);
+    }
+
+    .yellow-bg {
+        background-color: var(--yellow);
+    }
+
+    .blue-bg {
+        background-color: var(--blue);
+    }
+}
+
+/* QHD Monitors */
+@media only screen and (min-width: 2560px) {
+    main {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

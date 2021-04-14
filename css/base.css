@@ -1,0 +1,282 @@
+/* Browser Normalisation */
+
+/*
+
+Brand Colours
+
+Blue: #506EB5;
+Yellow: #FFC907;
+Pink: #F48FA4;
+Red: #D62936;
+Green: #4CAF7F;
+
+*/
+
+:root {
+    --primary: #D62936;
+    --secondary: #FFC907;
+    --pink: #F48FA4;
+    --blue: #506EB5;
+    --yellow: #FFC907;
+    --link: #4CAF7F;
+
+    cursor: url(./../img/cursor/cursor.png), auto;
+
+    --spacing: 100px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: black;
+    cursor: url(./../img/cursor/pointer.png), auto;
+}
+
+a.current-link {
+    color: var(--link);
+}
+
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Gopher-Bold;
+    src: url(./../fonts/Gopher-Bold.ttf) format("ttf"),
+         url(./../fonts/Gopher-Bold.woff) format("woff"),
+         url(./../fonts/Gopher-Bold.woff2) format("woff2");
+    font-weight: bold;
+}
+
+body {
+    max-height: 100vh;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+}
+
+.pink {
+    background-color: var(--pink);
+}
+
+.primary {
+    background-color: var(--primary);
+}
+
+.secondary {
+    background-color: var(--secondary);
+}
+
+.border {
+    border: 2px solid black;
+}
+
+@media only screen and (min-width: 992px) {
+    .border {
+        border: 5px solid black;
+    }
+
+    .border-noleft {
+        border-left: 0;
+    }
+}
+
+.border-notop {
+    border-top: 0;
+}
+
+.border-noright {
+    border-right: 0;
+}
+
+.border-nobottom {
+    border-bottom: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/****** Header ******/
+
+.box {
+    display: none;
+}
+
+header {
+    height: 50px;
+    display: flex;
+}
+
+#title {
+    font-family: 'Gopher-Bold';
+    font-size: 1rem;
+    flex: 0 1 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 0.5rem;
+}
+
+#marquee {
+    border-left: 0;
+    flex: 1 1 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    padding: 1rem;
+    font-family: 'Gopher-Bold';
+    text-align: center;
+    color: white;
+}
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+}
+
+.marquee > p {
+    -moz-transform: translateX(100%);
+    -moz-animation: scroll-left 8s linear infinite;
+    position: absolute;
+}
+
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(150%);
+    }
+    100% {
+        -moz-transform: translateX(-150%);
+    }
+}
+
+/****** Nav ******/
+
+nav {
+    height: 30px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex-shrink: 0;
+    display: flex;
+    display: grid;
+    place-items: center;
+}
+
+nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+nav > ul > li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: 'Gopher-Bold';
+    font-size: 0.7rem;
+}
+
+nav > ul > li:first-child {
+    margin-left: 0;
+}
+
+nav > ul > li:last-child {
+    margin-right: 0;
+}
+
+.spacer {
+    height: 50px;
+    flex-shrink: 0;
+}
+
+/****** Main ******/
+
+main {
+    height: calc(100vh - 130px);
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+}
+/* iPad, Landscape Mode, and HD Monitors */
+@media only screen and (min-width: 992px) {
+
+    .spacer {
+        display: none;
+    }
+    
+    body {
+        display: grid;
+        grid-template: 100px 1fr / 300px 1fr;
+        grid-template-areas: "header header"
+                             "nav main";
+    }
+    
+    header {
+        display: flex;
+        grid-area: header;
+        height: 100px;
+    }
+
+    #title {
+        width: 300px;
+        flex: 0 1 300px;
+        font-size: 2rem;
+    }
+
+    nav {
+        grid-area: nav;
+        grid-column: 1 / 2;
+        width: 300px;
+        height: 100%;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        height: 100%;
+        border-bottom: 0;
+        justify-content: start;
+    }
+
+    nav > ul > li {
+        font-size: 2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    nav > ul > li:first-child {
+        margin-top: 0;
+    }
+
+    main {
+        grid-area: main;
+        grid-row: 2/3;
+        grid-column: 2 / 3;
+        height: calc(100vh - 100px);
+        max-height: calc(100vh - 100px);
+    }
+}
