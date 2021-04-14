@@ -56,10 +56,9 @@
 
 .class__student {
     display: flex;
-    gap: 10px;
     justify-content: flex-start;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 7rem;
 }
 
 .class__student > picture, .class__student > picture > img {
