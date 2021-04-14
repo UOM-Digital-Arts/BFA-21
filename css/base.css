@@ -103,6 +103,10 @@ body {
     border-top: 2px solid black;
 }
 
+.marquee--yellow {
+    background-color: var(--yellow);
+}
+
 @media only screen and (min-width: 992px) {
 
     .border {
