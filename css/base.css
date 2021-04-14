@@ -148,7 +148,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     padding: 1rem;
     font-family: 'Gopher-Bold';
     text-align: center;
@@ -297,6 +297,10 @@ main {
         width: 300px;
         flex: 0 1 300px;
         font-size: 2rem;
+    }
+
+    #marquee {
+        font-size: 1.5rem;
     }
 
     nav {
