@@ -27,6 +27,7 @@ Green: #4CAF7F;
 
 html {
     box-sizing: border-box;
+    height: -webkit-fill-available;
 }
 
 a, a:visited {
@@ -62,6 +63,7 @@ img {
 
 body {
     max-height: 100vh;
+    max-height: -webkit-fill-available;
     height: 100vh;
     margin: 0;
     padding: 0;
