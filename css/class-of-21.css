@@ -16,6 +16,26 @@
 
 }
 
+.filter > ::-webkit-input-placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.filter > ::-moz-placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.filter > :-ms-input-placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.filter > ::-ms-input-placeholder {
+    color: black;
+    opacity: 1;
+}
+
 .filter > ::placeholder {
     color: black;
     opacity: 1;
@@ -50,7 +70,22 @@
 .class__student > picture:nth-child(2) {
     position: absolute;
     top: 0;
-    animation: fadeInAndOut 5s step-start infinite;
+    -webkit-animation: fadeInAndOut 5s step-start infinite;
+            animation: fadeInAndOut 5s step-start infinite;
+}
+
+@-webkit-keyframes fadeInAndOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInAndOut {
@@ -128,6 +163,26 @@ main > ul > a {
         font-weight: bold;
         font-style: italic;
 
+    }
+
+    .filter > ::-webkit-input-placeholder {
+        color: black;
+        opacity: 1;
+    }
+
+    .filter > ::-moz-placeholder {
+        color: black;
+        opacity: 1;
+    }
+
+    .filter > :-ms-input-placeholder {
+        color: black;
+        opacity: 1;
+    }
+
+    .filter > ::-ms-input-placeholder {
+        color: black;
+        opacity: 1;
     }
 
     .filter > ::placeholder {
