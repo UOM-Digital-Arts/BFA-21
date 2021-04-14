@@ -108,18 +108,19 @@
 }
 
 .project-images {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    justify-content: center;
-    align-items: center;
     padding: 2.5rem;
 }
 
 .project-images > picture, .project-images > picture > img {
     width: 100%;
     height: auto;
+    padding-bottom: 2.5rem;
 }
+
+.project-images > picture:last-child, .project-images > picture > img:last-child {
+    padding-bottom: 0;
+}
+
 
 /* iPad, Landscape Mode, and HD Monitors */
 @media only screen and (min-width: 992px) {
