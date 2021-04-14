@@ -13,10 +13,7 @@ main {
     flex-grow: 0;
     display: grid;
     place-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding: var(--spacing)
 }
 
 .quicklink {
@@ -53,47 +50,9 @@ li > a {
     .headline {
         font-size: 4rem;
     }
-    
-
-    body {
-        display: grid;
-        grid-template: 100px 1fr / 300px 1fr;
-        grid-template-areas: "header header"
-                             "nav main";
-    }
-    
-    header {
-        display: flex;
-        grid-area: header;
-    }
-
-    nav {
-        grid-area: nav;
-        grid-column: 1 / 2;
-        width: 300px;
-    }
-
-    nav > ul {
-        flex-direction: column;
-        height: 100%;
-        border-bottom: 0;
-        justify-content: start;
-        padding-top: 3rem;
-    }
-
-    nav > ul > li {
-        font-size: 2rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    nav > ul > li:first-child {
-        margin-top: 0;
-    }
 
     .headline {
         align-items: start;
-        padding-top: 2rem;
         font-size: 2rem;
     }
 
