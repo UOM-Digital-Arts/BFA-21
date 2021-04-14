@@ -77,6 +77,10 @@ li > a {
         flex: 0 1 300px;
         font-size: 2rem;
     }
+
+    .quicklink > a {
+        font-size: 4rem;
+    }
 }
 
 /* QHD Monitors */
