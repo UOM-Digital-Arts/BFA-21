@@ -3,13 +3,15 @@
 main {
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    justify-content: center;
-    flex-grow: 1;
-    padding: 2rem;
-    align-content: start;
+    padding: 2.5rem;
+}
+
+.project {
+    padding-bottom: 2.5rem;
+}
+
+a.project {
+    display: block;
 }
 
 .project-img {
@@ -26,7 +28,8 @@ img {
 .project-info {
     display: flex;
     flex-direction: column;
-    padding-top: 0.5rem;
+    padding: 1rem;
+    color: white;
 }
 
 .project-title {
@@ -35,6 +38,7 @@ img {
 }
 
 .project-tag {
+    margin-top: 0.5rem;
     font-size: 0.65rem;
 }
 
@@ -50,6 +54,18 @@ img {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+}
+
+.pink-bg {
+    background-color: var(--pink);
+}
+
+.yellow-bg {
+    background-color: var(--yellow);
+}
+
+.blue-bg {
+    background-color: var(--blue);
 }
 
 
@@ -68,22 +84,19 @@ img {
         display: none;
     }
 
-    /* Update Projects Page to Display 4 Projects per Row */
     main {
-        grid-template-columns: repeat(4, 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 2.5rem;
-        padding: 2.5rem;
+    }
+
+    .project {
+        padding: 0;
     }
 
     .project-title {
-        font-size: 1.2rem;
+        font-size: 1rem;
         height: 2rem;
-    }
-
-    .project-info {
-        background: black;
-        color: white;
-        padding: 1rem;
     }
 
     .project-tag {
@@ -99,17 +112,11 @@ img {
     .project-img {
         height: 230px;
     }
+}
 
-    .pink-bg {
-        background-color: var(--pink);
-    }
-
-    .yellow-bg {
-        background-color: var(--yellow);
-    }
-
-    .blue-bg {
-        background-color: var(--blue);
+@media only screen and (min-width: 1200px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
