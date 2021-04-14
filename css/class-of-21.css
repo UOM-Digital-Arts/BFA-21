@@ -196,10 +196,7 @@ main > ul > a {
         flex-grow: 1;
         padding-top: 5rem;
         padding-left: 3rem;
-        display: flex;
-        flex-direction: column;
         overflow-y: auto;
-        
     }
 
     .class__student > picture, .class__student > picture > img {
