@@ -110,11 +110,11 @@ body {
 @media only screen and (min-width: 992px) {
 
     .border {
-        border-width: 5px;
+        border-width: 4px;
     }
 
     .border-top {
-        border-width: 5px;
+        border-width: 4px;
     }
 
     .border-noleft-l {
