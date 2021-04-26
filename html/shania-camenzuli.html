@@ -26,62 +26,69 @@
 <body>
 
     <header>
-        <div id="title" class="border"><a href="../index.html">Retrospect</a></div>
-        <div id="marquee" class="border border-noleft primary marquee marquee--yellow">
-            <p>UOM's BFA Digital Arts' Online Exhibition 2021</p>
-        </div>
+        <div class="header__block border">Retrospect</div>
+        <div id="marquee" class="border border-noleft primary marquee"><p>University of Malta's BFA (Honours) Digital Arts' Online Exhibition 2021</p></div>
     </header>
 
     <nav class="border border-notop">
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./projects.html" class="current-link">Projects</a></li>
-            <li><a href="./class-of-21.html">Class of '21</a></li>
+            <li><a href="./index.html" class="current-link">Home</a></li>
+            <li><a href="./html/projects.html">Projects</a></li>
+            <li><a href="./html/class-of-21.html">Class of '21</a></li>
             <li>Sponsors</li>
             <li>BFA</li>
         </ul>
+        <a id="logo" href="./index.html"><img src="./../logo.svg" alt=""></a>
     </nav>
 
     <div class="spacer secondary border border-notop"></div>
 
+    <!-- 
+        CSS' overflow and padding are bugged: https://nshki.com/fixing-overflow-padding-in-firefox/.
+        The .main-container adds an unnecessary DOM element; pedantically, it is not the cleanest fix
+        but it is an easy bypass to ensure visual consistency. 
+    -->
+
     <main class="border border-notop border-noleft">
-        <div class="main__wrapper">
-            <div class="main__wrapper__info">
-                <div class="profile">
-                    <picture>
-                        <source srcset="../img/portraits/shaniacamenzuli-portrait-1.webp" type="image/webp">
-                        <source srcset="../img/portraits/shaniacamenzuli-portrait-1.jpg" type="image/jpeg">
-                        <img src="../img/portraits/shaniacamenzuli-portrait-1.jpg" alt="">
-                    </picture>
-                    <picture>
-                        <source srcset="../img/portraits/shaniacamenzuli-portrait-2.webp" type="image/webp">
-                        <source srcset="../img/portraits/shaniacamenzuli-portrait-2.jpg" type="image/jpeg">
-                        <img src="../img/portraits/shaniacamenzuli-portrait-2.jpg" alt="">
-                    </picture>
-                    <div class="profile__name">Shania Camenżuli</div>
-                </div>
-                <div class="project">
-                    <div class="project__title">Religious Iconography in Contemporary Art</div>
-                    <div class="project__tag">Photography</div>
-                    <div class="project__bio">
-                        <p>The project aims to push to the forefront specific social and environmental issues. The dramatic
-                            photographs act as a local critical commentary, hopefully raising more awareness.</p>
+        <div class="main-container">
+            <div class="main__wrapper">
+                <div class="main__wrapper__info">
+                    <div class="profile">
+                        <picture>
+                            <source srcset="../img/portraits/shaniacamenzuli-portrait-1.webp" type="image/webp">
+                            <source srcset="../img/portraits/shaniacamenzuli-portrait-1.jpg" type="image/jpeg">
+                            <img src="../img/portraits/shaniacamenzuli-portrait-1.jpg" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../img/portraits/shaniacamenzuli-portrait-2.webp" type="image/webp">
+                            <source srcset="../img/portraits/shaniacamenzuli-portrait-2.jpg" type="image/jpeg">
+                            <img src="../img/portraits/shaniacamenzuli-portrait-2.jpg" alt="">
+                        </picture>
+                        <div class="profile__name h1">Shania Camenżuli</div>
+                    </div>
+                    <div class="project">
+                        <div class="project__title h2">Religious Iconography in Contemporary Art</div>
+                        <div class="project__tag">Photography</div>
+                        <div class="project__bio">
+                            <p>The project aims to push to the forefront specific social and environmental issues. The dramatic
+                                photographs act as a local critical commentary, hopefully raising more awareness.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="project-images">
-                <picture onclick="photoSwipe(0)">
-                    <source srcset="../img/projects/shaniacamenzuli/shaniacamenzuli-project-1.png" type="image/jpeg">
-                    <img src="../img/projects/shaniacamenzuli/shaniacamenzuli-project-1.png" alt="">
-                </picture>
-                <picture onclick="photoSwipe(1)">
-                    <source srcset="../img/projects/shaniacamenzuli/shaniacamenzuli-project-2.png" type="image/jpeg">
-                    <img src="../img/projects/shaniacamenzuli/shaniacamenzuli-project-2.png" alt="">
-                </picture>
-                <picture onclick="photoSwipe(2)">
-                    <source srcset="../img/projects/shaniacamenzuli/shaniacamenzuli-project-3.png" type="image/jpeg">
-                    <img src="../img/projects/shaniacamenzuli/shaniacamenzuli-project-3.png" alt="">
-                </picture>
+                <div class="project-images">
+                    <picture onclick="photoSwipe(0)">
+                        <source srcset="../img/projects/shaniacamenzuli/shaniacamenzuli-project-1.png" type="image/jpeg">
+                        <img src="../img/projects/shaniacamenzuli/shaniacamenzuli-project-1.png" alt="">
+                    </picture>
+                    <picture onclick="photoSwipe(1)">
+                        <source srcset="../img/projects/shaniacamenzuli/shaniacamenzuli-project-2.png" type="image/jpeg">
+                        <img src="../img/projects/shaniacamenzuli/shaniacamenzuli-project-2.png" alt="">
+                    </picture>
+                    <picture onclick="photoSwipe(2)">
+                        <source srcset="../img/projects/shaniacamenzuli/shaniacamenzuli-project-3.png" type="image/jpeg">
+                        <img src="../img/projects/shaniacamenzuli/shaniacamenzuli-project-3.png" alt="">
+                    </picture>
+                </div>
             </div>
         </div>
     </main>

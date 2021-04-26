@@ -7,7 +7,6 @@
 
 .filter > input {
     width: 100%;
-    border: none;
     padding-left: 1rem;
     font-size: 0.7rem;
     font-family: Montserrat;
@@ -138,13 +137,21 @@ main > ul > a {
     font-size: 0.8rem;
 }
 
+.main-container {
+    margin: var(--spacing-s);
+}
+
+#class-list .main-container {
+    margin: 0;
+}
+
 /* iPad, Landscape Mode, and HD Monitors */
 @media only screen and (min-width: 992px) {
 
 
     .filter {
         width: 100%;
-        height: 100px;
+        height: auto;
         display: grid;
         align-items: center;
         flex-grow: 0;
@@ -154,7 +161,7 @@ main > ul > a {
     .filter > input {
         width: 100%;
         border: none;
-        padding-left: 2.5rem;
+        padding: var(--spacing);
         font-size: 1rem;
         font-family: Montserrat;
         font-weight: bold;
@@ -204,6 +211,10 @@ main > ul > a {
         height: 150px;
     }
     
+
+    .main-container {
+        margin: var(--spacing);
+    }
 
     .class__student__info {
         align-items: left;

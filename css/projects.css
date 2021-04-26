@@ -3,7 +3,10 @@
 main {
     margin: 0;
     padding: 0;
-    padding: 2.5rem;
+}
+
+.main-container {
+    margin: var(--spacing-s);
 }
 
 .project {
@@ -18,7 +21,7 @@ a.project {
     height: 120px;
 }
 
-img {
+.project-img img {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
@@ -62,6 +65,10 @@ img {
 
     /* Update Projects Page to Display 2 Projects per Row */
 
+    .main-container {
+        margin: var(--spacing);
+    }    
+
     .project-img {
         height: 300px;
     }
@@ -70,13 +77,10 @@ img {
         display: none;
     }
 
-    main {
+    .main-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2.5rem;
-    }
-
-    .project-title {
+        grid-gap: var(--spacing);
     }
 
     .project {
@@ -108,13 +112,12 @@ img {
 }
 
 @media only screen and (min-width: 1200px) {
-    main {
+    .main-container {
         grid-template-columns: repeat(3, 1fr);
     }
 
     .project-title {
         font-size: 1.2rem;
-        margin-right: 8rem;
     }
 }
 

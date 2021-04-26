@@ -12,181 +12,190 @@
 <body>
  
     <header>
-            <div id="title" class="border"><a href="../index.html">Retrospect</a></div>
-            <div id="marquee" class="border border-noleft primary marquee"><p>UOM's BFA Digital Arts' Online Exhibition 2021</p></div>
+        <div class="header__block border">Retrospect</div>
+        <div id="marquee" class="border border-noleft primary marquee"><p>University of Malta's BFA (Honours) Digital Arts' Online Exhibition 2021</p></div>
     </header>
 
     <nav class="border border-notop">
         <ul>
             <li><a href="./../index.html">Home</a></li>
             <li><a href="./projects.html" class="current-link">Projects</a></li>
-            <li><a href="./class-of-21.html">Class of '21</a></li>
+            <li><a href="./../html/class-of-21.html">Class of '21</a></li>
             <li>Sponsors</li>
             <li>BFA</li>
         </ul>
+        <a id="logo" href="./../index.html"><img src="./../logo.svg" alt=""></a>
     </nav>
 
     <div class="spacer secondary border border-notop"></div>
 
+    <!-- 
+        CSS' overflow and padding are bugged: https://nshki.com/fixing-overflow-padding-in-firefox/.
+        The .main-container adds an unnecessary DOM element; pedantically, it is not the cleanest fix
+        but it is an easy bypass to ensure visual consistency. 
+    -->
+
     <main class="border border-notop border-noleft-l">
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/nicolefarrugia-featured.webp" alt="">
+        <div class="main-container">
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/nicolefarrugia-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">A Visual Expression of Emotion through Fluorescent Light</div>
+                    <div class="project-tag">Photography</div>
+                    <div class="project-student">Nicole Farrugia</div>
+                </div>
             </div>
-            <div class="project-info border-top">
-                <div class="project-title">A Visual Expression of Emotion through Fluorescent Light</div>
-                <div class="project-tag">Photography</div>
-                <div class="project-student">Nicole Farruġia</div>
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/aaronzarb-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">An Adaptation of a Maltese Poem into an Animated Short Film</div>
+                    <div class="project-tag">3D Animation</div>
+                    <div class="project-student">Aaron Zarb</div>
+                </div>
             </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/aaronzarb-featured.webp" alt="">
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/rebeccazammit-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">An Adapation of a Maltese Folktale</div>
+                    <div class="project-tag">Sequential Art</div>
+                    <div class="project-student">Rebecca Zammit</div>
+                </div>
             </div>
-            <div class="project-info border-top">
-                <div class="project-title">An Adaptation of a Maltese Poem into an Animated Short Film</div>
-                <div class="project-tag">3D Animation</div>
-                <div class="project-student">Aaron Żarb</div>
+            <div class="project border">
+                <div class="project-img ">
+                    <img src="../img/featured/samwelborg-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Colour in Disney’s Animated Adaptations</div>
+                    <div class="project-tag">3D Animation</div>
+                    <div class="project-student">Samwel Borg</div>
+                </div>
             </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/rebeccazammit-featured.webp" alt="">
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/mariaspiteri-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Exploring the Outcomes of Creativity through Mental Health</div>
+                    <div class="project-tag">Textile Crafts</div>
+                    <div class="project-student">Maria Spiteri</div>
+                </div>
             </div>
-            <div class="project-info border-top">
-                <div class="project-title">An Adapation of a Maltese Folktale</div>
-                <div class="project-tag">Sequential Art</div>
-                <div class="project-student">Rebecca Żammit</div>
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/sashavella-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Exploring the Space between Clothing and the Female Body </div>
+                    <div class="project-tag">Film Photography</div>
+                    <div class="project-student">Sasha Vella</div>
+                </div>
             </div>
-        </div>
-        <div class="project border">
-            <div class="project-img ">
-                <img src="../img/featured/samwelborg-featured.webp" alt="">
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/paigefarrugia-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Fake Authenticity in Filmmaking</div>
+                    <div class="project-tag">Graphic Design</div>
+                    <div class="project-student">Paige Farrugia</div>
+                </div>
             </div>
-            <div class="project-info border-top">
-                <div class="project-title">Colour in Disney’s Animated Adaptations</div>
-                <div class="project-tag">3D Animation</div>
-                <div class="project-student">Samwel Borġ</div>
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/sarahbonaci-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Fragments</div>
+                    <div class="project-tag">Photography</div>
+                    <div class="project-student">Sarah Bonaci</div>
+                </div>
             </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/mariaspiteri-featured.webp" alt="">
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/martinafarrugia-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">In Reenactment</div>
+                    <div class="project-tag">Photography</div>
+                    <div class="project-student">Martina Farrugia</div>
+                </div>
             </div>
-            <div class="project-info border-top">
-                <div class="project-title">Exploring the Outcomes of Creativity through Mental Health</div>
-                <div class="project-tag">Textile Crafts</div>
-                <div class="project-student">Maria Spiteri</div>
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/ruthcalleja-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Leaving a Mark</div>
+                    <div class="project-tag">Typography</div>
+                    <div class="project-student">Ruth Calleja</div>
+                </div>
             </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/sashavella-featured.webp" alt="">
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/kristovscicluna-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Mazda's Evolution of Design</div>
+                    <div class="project-tag">Automotive Design</div>
+                    <div class="project-student">Kristov Scicluna</div>
+                </div>
             </div>
-            <div class="project-info border-top">
-                <div class="project-title">Exploring the Space between Clothing and the Female Body </div>
-                <div class="project-tag">Film Photography</div>
-                <div class="project-student">Sasha Vella</div>
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/cherisemicallef-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Moving Places</div>
+                    <div class="project-tag">Photography</div>
+                    <div class="project-student">Cherise Micallef</div>
+                </div>
             </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/paigefarrugia-featured.webp" alt="">
+            <a href="./shania-camenzuli.html" class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/shaniacamenzuli-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Religious Iconography in Contemporary Art</div>
+                    <div class="project-tag">Photography</div>
+                    <div class="project-student">Shania Camenzuli</div>
+                </div>
+            </a>
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/stephaniecalleja-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">Repetition as a Record of Movement through Lenticular Art</div>
+                    <div class="project-tag">Typography</div>
+                    <div class="project-student">Stephanie Calleja</div>
+                </div>
             </div>
-            <div class="project-info border-top">
-                <div class="project-title">Fake Authenticity in Filmmaking</div>
-                <div class="project-tag">Graphic Design</div>
-                <div class="project-student">Paige Farruġia</div>
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/elisachetcuti-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">A Visual Experience for the Visually Impaired</div>
+                    <div class="project-tag">Illustration</div>
+                    <div class="project-student">Elisa Chetcuti</div>
+                </div>
             </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/sarahbonaci-featured.webp" alt="">
-            </div>
-            <div class="project-info border-top">
-                <div class="project-title">Fragments</div>
-                <div class="project-tag">Photography</div>
-                <div class="project-student">Sarah Bonaċi</div>
-            </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/martinafarrugia-featured.webp" alt="">
-            </div>
-            <div class="project-info border-top">
-                <div class="project-title">In Reenactment</div>
-                <div class="project-tag">Photography</div>
-                <div class="project-student">Martina Farruġia</div>
-            </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/ruthcalleja-featured.webp" alt="">
-            </div>
-            <div class="project-info border-top">
-                <div class="project-title">Leaving a Mark</div>
-                <div class="project-tag">Typography</div>
-                <div class="project-student">Ruth Calleja</div>
-            </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/kristovscicluna-featured.webp" alt="">
-            </div>
-            <div class="project-info border-top">
-                <div class="project-title">Mazda's Evolution of Design</div>
-                <div class="project-tag">Automotive Design</div>
-                <div class="project-student">Kristov Scicluna</div>
-            </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/cherisemicallef-featured.webp" alt="">
-            </div>
-            <div class="project-info border-top">
-                <div class="project-title">Moving Places</div>
-                <div class="project-tag">Photography</div>
-                <div class="project-student">Cherise Micallef</div>
-            </div>
-        </div>
-        <a href="./shania-camenzuli.html" class="project border">
-            <div class="project-img">
-                <img src="../img/featured/shaniacamenzuli-featured.webp" alt="">
-            </div>
-            <div class="project-info border-top">
-                <div class="project-title">Religious Iconography in Contemporary Art</div>
-                <div class="project-tag">Photography</div>
-                <div class="project-student">Shania Camenżuli</div>
-            </div>
-        </a>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/stephaniecalleja-featured.webp" alt="">
-            </div>
-            <div class="project-info border-top">
-                <div class="project-title">Repetition as a Record of Movement through Lenticular Art</div>
-                <div class="project-tag">Typography</div>
-                <div class="project-student">Stephanie Calleja</div>
-            </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/elisachetcuti-featured.webp" alt="">
-            </div>
-            <div class="project-info border-top">
-                <div class="project-title">A Visual Experience for the Visually Impaired</div>
-                <div class="project-tag">Illustration</div>
-                <div class="project-student">Elisa Chetcuti</div>
-            </div>
-        </div>
-        <div class="project border">
-            <div class="project-img">
-                <img src="../img/featured/naomiportelli-featured.webp" alt="">
-            </div>
-            <div class="project-info border-top">
-                <div class="project-title">The Type that Surrounds Us</div>
-                <div class="project-tag">Typography</div>
-                <div class="project-student">Naomi Portelli</div>
+            <div class="project border">
+                <div class="project-img">
+                    <img src="../img/featured/naomiportelli-featured.webp" alt="">
+                </div>
+                <div class="project-info border-top">
+                    <div class="project-title">The Type that Surrounds Us</div>
+                    <div class="project-tag">Typography</div>
+                    <div class="project-student">Naomi Portelli</div>
+                </div>
             </div>
         </div>
     </main>

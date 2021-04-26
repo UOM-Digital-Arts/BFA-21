@@ -12,28 +12,95 @@ Green: #4CAF7F;
 
 */
 
+/* Type */
+
+body {
+    font-weight: 500;
+}
+  
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  h1 {
+    margin-top: 0;
+    font-size: 2.488rem;
+  }
+  
+  h2 {font-size: 2.074rem;}
+  
+  h3 {font-size: 1.728rem;}
+  
+  h4 {font-size: 1.44rem;}
+  
+  h5 {font-size: 1.2rem;}
+  
+  small, .text_small {font-size: 0.833rem;}
+
+
+/* Hover.css (https://ianlunn.github.io/Hover/) under MIT License */
+/* Grow Rotate */
+.hvr-grow-rotate {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    }
+    .hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+    -webkit-transform: scale(1.25) rotate(-5deg);
+    transform: scale(1.25) rotate(-5deg);
+}
+
 :root {
     --primary: #4CAF7F;
     --secondary: #FFC907;
     --pink: #F48FA4;
     --blue: #506EB5;
     --yellow: #FFC907;
+    --red: #D62936;
     --link: #4CAF7F;
 
-    cursor: url(./../img/cursor/cursor.png), auto;
+    --spacing-s: 1.5rem;
+    --spacing: 2.5rem;
 
-    --spacing: 3rem;
+
+    --headerheight-s: 70px;
+    --headerheight-l: 100px 
 }
+
+
+::-moz-selection {
+    background-color: var(--red);
+    color: white;
+}
+::selection {
+    background-color: var(--red);
+    color: white;
+}
+
 
 html {
     box-sizing: border-box;
     height: -webkit-fill-available;
+    margin: var(--spacing-s);
 }
 
 a, a:visited {
     text-decoration: none;
     color: black;
-    cursor: url(./../img/cursor/pointer.png), auto;
 }
 
 a.current-link {
@@ -45,6 +112,7 @@ a.current-link {
 ::after {
     box-sizing: inherit;
 }
+
 
 img {
     display: block;
@@ -61,9 +129,9 @@ img {
 }
 
 body {
-    max-height: 100vh;
+    max-height: calc(100vh - (2*var(--spacing-s)));
     max-height: -webkit-fill-available;
-    height: 100vh;
+    height: calc(100vh - (2*var(--spacing-s)));
     margin: 0;
     padding: 0;
     font-family: Montserrat;
@@ -99,6 +167,10 @@ body {
     border-left: 0;
 }
 
+.border-nobottom {
+    border-bottom: 0;
+}
+
 .border-top {
     border-top: 2px solid black;
 }
@@ -108,6 +180,15 @@ body {
 }
 
 @media only screen and (min-width: 992px) {
+    
+    body {
+        max-height: calc(100vh - (2*var(--spacing)));
+        height: calc(100vh - (2*var(--spacing)));
+    }
+
+    html {
+        margin: var(--spacing);
+    }
 
     .border {
         border-width: 4px;
@@ -139,23 +220,20 @@ ul, li {
 }
 
 header {
-    height: 50px;
+    height: var(--headerheight-s);
     display: flex;
 }
 
-#title {
+.header__block {
+    flex: 1 1 150px;
     font-family: 'Gopher-Bold';
-    font-size: 1rem;
-    flex: 0 1 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-transform: uppercase;
-    padding: 0.5rem;
+    font-size: 1rem;
+    padding: var(--spacing-s);
 }
 
 #marquee {
-    flex: 1 1 200px;
+    flex: 1 1 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,13 +317,20 @@ nav > ul > li:last-child {
     flex-shrink: 0;
 }
 
+#logo {
+    display: none;
+    align-items: flex-start;
+}
+
 /****** Main ******/
 
 main {
-    height: calc(100vh - 130px);
-    max-height: calc(100vh - 130px);
+    height: calc(100vh - (2*var(--spacing)) - var(--headerheight-l));
+    max-height: calc(100vh - (2*var(--spacing)) - var(--headerheight-l));
     overflow-y: auto;
+    overflow-x: hidden;
 }
+
 /* iPad, Landscape Mode, and HD Monitors */
 @media only screen and (min-width: 992px) {
 
@@ -277,7 +362,7 @@ main {
 
     body {
         display: grid;
-        grid-template: 100px 1fr / 300px 1fr;
+        grid-template: 300px 1fr / 300px 1fr;
         grid-template-areas: "header header"
                              "nav main";
     }
@@ -285,25 +370,36 @@ main {
     header {
         display: flex;
         grid-area: header;
+        height: var(--headerheight-l);
+    }
+
+    .header__block {
+        flex: 0 0 300px;
+        background-color: var(--yellow);
+        color: var(--yellow);
     }
 
     nav {
         grid-area: nav;
         grid-column: 1 / 2;
         width: 300px;
+        height: calc(100vh - (2*var(--spacing)) - var(--headerheight-l));
+        max-height: calc(100vh - (2*var(--spacing)) - var(--headerheight-l));
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: var(--spacing);
     }
 
     nav > ul {
         flex-direction: column;
-        height: 100%;
-        justify-content: start;
-        padding-top: var(--spacing);
+        align-items: flex-start;
     }
 
     nav > ul > li {
         font-size: 2rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
+        margin: 0.5rem 0;
     }
 
     nav > ul > li:first-child {
@@ -316,15 +412,14 @@ main {
     
     body {
         display: grid;
-        grid-template: 100px 1fr / 300px 1fr;
+        grid-template: var(--headerheight-l) 1fr / 300px 1fr;
         grid-template-areas: "header header"
                              "nav main";
     }
-    
-    header {
-        display: flex;
-        grid-area: header;
-        height: 100px;
+    ;
+
+    .main-container {
+        margin: var(--spacing);
     }
 
     #title {
@@ -338,34 +433,21 @@ main {
         font-size: 1.5rem;
     }
 
-    nav {
-        grid-area: nav;
-        grid-column: 1 / 2;
-        width: 300px;
-        height: 100%;
+    #logo {
+        margin-top: 10rem;
+        display: block;
     }
 
-    nav > ul {
-        flex-direction: column;
-        height: 100%;
-        justify-content: start;
-    }
-
-    nav > ul > li {
-        font-size: 2rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    nav > ul > li:first-child {
-        margin-top: 0;
+    #logo img {
+        height: 100px;
+        width: 100px;
     }
 
     main {
         grid-area: main;
         grid-row: 2/3;
         grid-column: 2 / 3;
-        height: calc(100vh - 100px);
-        max-height: calc(100vh - 100px);
+        height: calc(100vh - (2*var(--spacing)) - var(--headerheight-l));
+        max-height: calc(100vh - (2*var(--spacing)) - var(--headerheight-l));
     }
 }

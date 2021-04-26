@@ -133,7 +133,7 @@
     }
 
     .main__wrapper__info {
-        width: 60%;
+        width: 40%;
     }
 
     .profile__name {
@@ -167,9 +167,7 @@
     }
     
     .project-images {
-        overflow-x: unset;
-        overflow-y: scroll;
-        width: 40%;
+        width: 60%;
     }
 
     .project-images > picture, .project-images > picture > img {
