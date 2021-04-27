@@ -94,7 +94,8 @@ body {
 
 html {
     box-sizing: border-box;
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
+    max-height: -webkit-fill-available;
     margin: var(--spacing-s);
 }
 
@@ -129,9 +130,9 @@ img {
 }
 
 body {
-    max-height: calc(100vh - (2*var(--spacing-s)));
+    min-height: -webkit-fill-available;
     max-height: -webkit-fill-available;
-    height: calc(100vh - (2*var(--spacing-s)));
+    min-height: calc(100vh - (2*var(--spacing-s)));
     margin: 0;
     padding: 0;
     font-family: Montserrat;
@@ -179,11 +180,15 @@ body {
     background-color: var(--yellow);
 }
 
+main {
+    height: calc(100vh - (2*var(--spacing-s)) - var(--headerheight-s));
+}
+
 @media only screen and (min-width: 992px) {
     
     body {
-        max-height: calc(100vh - (2*var(--spacing)));
-        height: calc(100vh - (2*var(--spacing)));
+        min-height: -webkit-fill-available;
+        min-height: calc(100vh - (2*var(--spacing-l)));
     }
 
     html {
@@ -325,8 +330,7 @@ nav > ul > li:last-child {
 /****** Main ******/
 
 main {
-    height: calc(100vh - (2*var(--spacing)) - var(--headerheight-l));
-    max-height: calc(100vh - (2*var(--spacing)) - var(--headerheight-l));
+    height: calc(100vh - (2*var(--spacing-s)) - var(--headerheight-s));
     overflow-y: auto;
     overflow-x: hidden;
 }
