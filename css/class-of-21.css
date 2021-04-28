@@ -55,7 +55,7 @@
     display: flex;
     justify-content: flex-start;
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing);
 }
 
 .class__student > picture, .class__student > picture > img {
@@ -138,7 +138,7 @@ main > ul > a {
 }
 
 .main-container {
-    margin: var(--spacing-s);
+    margin: var(--spacing);
 }
 
 #class-list .main-container {

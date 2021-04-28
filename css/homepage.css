@@ -1,45 +1,38 @@
-/****** Introduction ******/
+/**************** Introduction ****************/
 
 main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
-.headline {
+.headline p {
+    padding: var(--spacing);
+
+    font-size: 1.2rem;
     font-family: 'Gopher-Bold';
-    font-size: 1rem;
-    flex-grow: 0;
+    text-transform: up;
     display: grid;
     place-items: center;
-    padding: var(--spacing-s)
 }
 
 .quicklink {
+    flex-grow: 1;
+    padding: var(--spacing);
     display: grid;
     place-items: center;
-    flex-grow: 1;
 }
 
 .quicklink > a {
     color: var(--blue);
-    font-size: 1.5rem;
+    font-size: var(--big);
+    text-transform: uppercase;
+    
 }
 
-a {
-    font-family: 'Gopher-Bold';
-}
+/**************** Breakpoints ****************/
 
-li > a {
-    text-decoration: none;
-    color: black;
-}
-
-/************ Breakpoints ************/
-
-/* iPad and HD Monitors */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
 
     /* Homepage */
 
@@ -47,9 +40,8 @@ li > a {
         display: none;
     }
 
-    .headline {
-        font-size: 4rem;
-        padding: var(--spacing)
+    .headline p {
+        font-size: 2.074rem;
     }
 
     .headline {
@@ -58,14 +50,8 @@ li > a {
 
     main {
         grid-area: main;
-        grid-row: 2/3;
-        grid-column: 2 / 3;
-        display: grid;
-        grid-template: 1fr 1fr / 1fr 1fr;
-    }
-
-    .box {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     #title {
@@ -75,13 +61,25 @@ li > a {
     }
 
     .quicklink > a {
-        font-size: 4rem;
+        transform: rotate(-90deg);
+        font-size: var(--bigger);
     }
 }
 
-/* QHD Monitors */
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 1200px) {
+    main {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
 
+    .box {
+        display: block;
+    }
+
+    .quicklink > a {
+        transform: rotate(0);
+        font-size: var(--biggest);
+    }
 }
 
 

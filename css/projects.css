@@ -6,11 +6,11 @@ main {
 }
 
 .main-container {
-    margin: var(--spacing-s);
+    margin: var(spacing);
 }
 
 .project {
-    margin-bottom: 2.5rem;
+    margin-bottom: var(spacing);
 }
 
 a.project {
@@ -37,6 +37,7 @@ a.project {
 .project-title {
     font-family: 'Gopher-Bold';
     font-size: 0.875em;
+    margin-bottom: 0.5rem;
 }
 
 .project-tag {
