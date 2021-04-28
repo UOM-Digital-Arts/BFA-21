@@ -12,15 +12,17 @@ main {
     font-size: 1.2rem;
     font-family: 'Gopher-Bold';
     text-transform: up;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .quicklink {
     flex-grow: 1;
     padding: var(--spacing);
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .quicklink > a {
