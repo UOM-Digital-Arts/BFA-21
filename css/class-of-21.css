@@ -47,8 +47,8 @@
 }
 
 .class {
-    padding-top: 1rem;
-    padding-left: 1rem;
+    padding-top: var(--spacing);
+    padding-left: var(--spacing);
     overflow-y: auto;
 }
 
@@ -146,8 +146,7 @@ main > ul > a {
     margin: 0;
 }
 
-/* iPad, Landscape Mode, and HD Monitors */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
 
 
     .filter {
@@ -201,9 +200,12 @@ main > ul > a {
     }
 
     .class {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .class {
         flex-grow: 1;
-        padding-top: 2.5rem;
-        padding-left: 2.5rem;
         overflow-y: auto;
     }
 
@@ -233,17 +235,8 @@ main > ul > a {
 }
 
 @media only screen and (min-width: 992px) {
-    .class {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+    
 }
-
-/* QHD Monitors */
-@media only screen and (min-width: 2560px) {
- 
-}
-
 
 
 

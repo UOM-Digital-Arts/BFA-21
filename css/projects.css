@@ -65,7 +65,6 @@ a.project {
 
 /************ Breakpoints ************/
 
-/* iPad and HD Monitors */
 @media only screen and (min-width: 992px) {
 
     .project-img {
