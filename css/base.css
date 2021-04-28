@@ -202,13 +202,11 @@ img {
 /**************** Layout ****************/
 
 html {
-    max-height: -webkit-fill-available;
     height: calc(100vh - (2*var(--spacing)));
     padding: var(--spacing);
 }
 
 body {
-    max-height: -webkit-fill-available;
     height: calc(100vh - (2*var(--spacing)));
     margin: 0;
     padding: 0;
