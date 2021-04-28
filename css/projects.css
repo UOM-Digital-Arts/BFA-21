@@ -6,11 +6,15 @@ main {
 }
 
 .main-container {
-    margin: var(spacing);
+    padding: var(--spacing);
 }
 
 .project {
-    margin-bottom: var(spacing);
+    margin-bottom: var(--spacing);
+}
+
+.project:last-child {
+    margin-bottom: 0;
 }
 
 a.project {
@@ -64,12 +68,6 @@ a.project {
 /* iPad and HD Monitors */
 @media only screen and (min-width: 992px) {
 
-    /* Update Projects Page to Display 2 Projects per Row */
-
-    .main-container {
-        margin: var(--spacing);
-    }    
-
     .project-img {
         height: 300px;
     }
@@ -86,10 +84,6 @@ a.project {
 
     .project {
         margin-bottom: 0;
-    }
-
-    .project {
-        padding: 0;
     }
 
     .project-title {
