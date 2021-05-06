@@ -58,13 +58,10 @@
 }
 
 .profile__name {
+    font-size: var(--t2u);
     margin-left: var(--spacing);
     font-family: 'Gopher-Bold';
     margin-bottom: 0;
-}
-
-.profile__name--yellow, {
-    color: var(--yellow);
 }
 
 .project {
@@ -74,12 +71,18 @@
 .project__title {
     font-family: 'Gopher-Bold';
     margin-top: var(--spacing);
+    font-size: 1rem;
+    padding-right: calc(2*var(--spacing));
     margin-bottom: 0.233rem;
 }
 
 .project__tag {
-    font-size: 0.694rem;
+    font-size: var(--t2d);
     margin-bottom: var(--spacing);
+}
+
+.project__bio {
+    font-size: var(--t1d);
 }
 
 .project-images {

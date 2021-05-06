@@ -31,8 +31,8 @@
     <nav class="border border-notop-l">
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="./projects.html" class="current-link">Projects</a></li>
-            <li><a href="../class-of-21/class-of-21.html">Class of '21</a></li>
+            <li><a href="../projects/index.html" class="current-link">Projects</a></li>
+            <li><a href="../class-of-21/index.html">Class of '21</a></li>
             <li>Sponsors</li>
             <li>BFA</li>
         </ul>
@@ -45,10 +45,10 @@
         but it is an easy bypass to ensure visual consistency. 
     -->
 
-    <main class="border border-notop-l border-noleft-l">
+    <main class="border border-notop-s border-notop-l border-noleft-l">
         <div class="main-container">
             <div class="main__wrapper">
-                <div class="main__wrapper__info">
+                <div class="main__wrapper__info border-bottom">
                     <div class="profile">
                         <picture>
                             <source srcset="../img/portraits/shaniacamenzuli-portrait-1.webp" type="image/webp">
@@ -60,7 +60,7 @@
                             <source srcset="../img/portraits/shaniacamenzuli-portrait-2.jpg" type="image/jpeg">
                             <img src="../img/portraits/shaniacamenzuli-portrait-2.jpg" alt="">
                         </picture>
-                        <h1 class="profile__name profile__name--yellow">Shania Camenżuli</h1>
+                        <h1 class="profile__name">Shania Camenzuli</h1>
                     </div>
                     <div class="project">
                         <h2 class="project__title">Religious Iconography in Contemporary Art</h2>
@@ -177,6 +177,13 @@
         let vh = window.innerHeight * 0.01;
         // Set in CSS
         document.documentElement.style.setProperty('--vh', `${vh}px`);
+    </script>
+
+    <script src="https://unpkg.com/vh-check/dist/vh-check.min.js"></script>
+    <script>
+        (function () {
+            vhCheck();
+        }());
     </script>
 
 </body>
