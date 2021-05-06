@@ -1,5 +1,14 @@
 /**************** Introduction ****************/
 
+.spacer {
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.spacer--grow {
+    flex-grow: 1;
+}
+
 main {
     flex-grow: 1;
     display: flex;
@@ -8,10 +17,8 @@ main {
 
 .headline p {
     padding: var(--spacing);
-
-    font-size: 1.2rem;
+    font-size: var(--t0);
     font-family: 'Gopher-Bold';
-    text-transform: up;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,14 +34,14 @@ main {
 
 .quicklink > a {
     color: var(--blue);
-    font-size: var(--big);
+    font-size: var(--t2u);
     text-transform: uppercase;
     
 }
 
 /**************** Breakpoints ****************/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 375px) {
 
     /* Homepage */
 
@@ -43,11 +50,7 @@ main {
     }
 
     .headline p {
-        font-size: 2.074rem;
-    }
-
-    .headline {
-        font-size: 2.5rem;
+        font-size: var(--t1u);
     }
 
     main {
@@ -56,15 +59,32 @@ main {
         flex-direction: column;
     }
 
-    #title {
-        width: 300px;
-        flex: 0 1 300px;
-        font-size: 2rem;
+    .quicklink > a {
+        font-size: var(--t3u);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /**************** Layout ****************/
+    .spacer {
+        display: none;
+    }
+
+    main {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /**************** Type ****************/
+
+    .headline p {
+        font-size: var(--t3u);
     }
 
     .quicklink > a {
-        transform: rotate(-90deg);
-        font-size: var(--bigger);
+        font-size: var(--t6u);
     }
 }
 
@@ -77,12 +97,24 @@ main {
     .box {
         display: block;
     }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    main {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+    
+    .headline p {
+        font-size: var(--t4u);
+    }
 
     .quicklink > a {
-        transform: rotate(0);
-        font-size: var(--biggest);
+        font-size: var(--t7u);
     }
 }
+
 
 
 

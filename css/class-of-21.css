@@ -8,7 +8,7 @@
 .filter > input {
     width: 100%;
     padding: var(--spacing);
-    font-size: 0.694rem;
+    font-size: var(--t3d);
     font-family: Montserrat;
     font-weight: bold;
     font-style: italic;
@@ -19,7 +19,6 @@
 .filter > textarea:focus, .filter > input:focus {
     outline: none;
 }
-
 
 .filter > ::-webkit-input-placeholder {
     color: black;
@@ -46,9 +45,10 @@
     opacity: 1;
 }
 
+/**************** Student ****************/
+
 .class {
-    padding-top: var(--spacing);
-    padding-left: var(--spacing);
+    padding: var(--spacing);
     overflow-y: auto;
 }
 
@@ -103,20 +103,19 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-right: 1.5rem;
-    margin-left: 0.5rem;
+    margin-left: var(--spacing)
 }
 
 .class__student__info__name {
     font-family: 'Gopher-Bold';
     font-weight: bold;
-    font-size:1rem; /* to change to clamp */
+    font-size: var(--t0);
     margin-bottom: 0.5rem;
     padding-right: 1rem;
 }
 
 .class__student__info__tag {
-    font-size: 0.675rem;
+    font-size: var(--t3d);
     padding-right: 0.4rem;
 }
 
@@ -138,16 +137,25 @@ main > ul > a {
     font-size: 0.8rem;
 }
 
-.main-container {
-    margin: var(--spacing);
+#class-list .main-container {
+    border: 0;
 }
 
-#class-list .main-container {
-    margin: 0;
+@media only screen and (min-width: 375px) {
+    .class__student__info__name {
+        font-size: var(--t1u);
+    }
+
+    .class__student__info__tag {
+        font-size: var(--t1d);
+    }
+
+    .filter > input {
+        font-size: var(--t2d);
+    };
 }
 
 @media only screen and (min-width: 1200px) {
-
 
     .filter {
         width: 100%;
@@ -159,49 +167,18 @@ main > ul > a {
     }
 
     .filter > input {
-        width: 100%;
-        border: none;
-        padding: var(--spacing);
-        font-size: 1rem;
-        font-family: Montserrat;
-        font-weight: bold;
-        font-style: italic;
+        font-size: var(--t0);
 
-    }
-
-    .filter > ::-webkit-input-placeholder {
-        color: black;
-        opacity: 1;
-    }
-
-    .filter > ::-moz-placeholder {
-        color: black;
-        opacity: 1;
-    }
-
-    .filter > :-ms-input-placeholder {
-        color: black;
-        opacity: 1;
-    }
-
-    .filter > ::-ms-input-placeholder {
-        color: black;
-        opacity: 1;
-    }
-
-    .filter > ::placeholder {
-        color: black;
-        opacity: 1;
-    }
-    
-    .filter > input:focus {
-        outline: none;
-        color: black;
     }
 
     .class {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, max-content);
+        grid-gap: var(--spacing);
+    }
+
+    .class__student {
+        margin-bottom: 0; /* Handled by grid-gap. */
     }
 
     .class {
@@ -212,11 +189,6 @@ main > ul > a {
     .class__student > picture, .class__student > picture > img {
         width: 150px;
         height: 150px;
-    }
-    
-
-    .main-container {
-        margin: var(--spacing);
     }
 
     .class__student__info {

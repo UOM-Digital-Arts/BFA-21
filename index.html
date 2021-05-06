@@ -12,14 +12,14 @@
 <body>
     <header>
         <div class="header__block border"><h1>Retrospect</h1></div>
-        <div id="marquee" class="border border-notop-s border-nobottom-s border-noleft-l primary marquee"> University of Malta BFA (Honours) Digital Arts</div>
+        <div id="marquee" class="border border-notop-s border-nobottom-s border-noleft-l primary marquee"> UM BFA (Honours) Digital Arts</div>
     </header>
 
     <nav class="border border-notop-l">
         <ul>
             <li><a href="./index.html" class="current-link">Home</a></li>
-            <li><a href="./projects/projects.html">Projects</a></li>
-            <li><a href="./class-of-21/class-of-21.html">Class of '21</a></li>
+            <li><a href="./projects/index.html">Projects</a></li>
+            <li><a href="./class-of-21/index.html">Class of '21</a></li>
             <li>Sponsors</li>
             <li>BFA</li>
         </ul>
@@ -37,13 +37,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/balance-text/3.3.0/balancetext.min.js"></script>
     <script>balanceText();</script>
 
+    <script src="https://unpkg.com/vh-check/dist/vh-check.min.js"></script>
     <script>
-        // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-
-        // Get Viewport Height and Multiply by 1% to Get VH Unit
-        let vh = window.innerHeight * 0.01;
-        // Set in CSS
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    (function () {
+        vhCheck();
+    }());
     </script>
 </body>
 </html>

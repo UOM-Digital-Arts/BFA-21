@@ -22,7 +22,7 @@ a.project {
 }
 
 .project-img {
-    height: 120px;
+    height: 170px;
 }
 
 .project-img img {
@@ -35,93 +35,63 @@ a.project {
 .project-info {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: var(--spacing);
 }
 
 .project-title {
     font-family: 'Gopher-Bold';
-    font-size: 0.875em;
-    margin-bottom: 0.5rem;
+    font-size: var(--t1d);
+    margin-bottom: var(--t0);
 }
 
 .project-tag {
-    margin-top: 0.5rem;
-    font-size: 0.65rem;
+    font-size: var(--t2d);
 }
 
 .project-student {
-    font-size: 0.75rem;
+    font-size: var(--t2d);
     margin-top: 0.25rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-
-.content {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-}
-
 /************ Breakpoints ************/
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
 
     .project-img {
-        height: 300px;
-    }
-    
-    .spacer {
-        display: none;
-    }
-
-    .main-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: var(--spacing);
-    }
-
-    .project {
-        margin-bottom: 0;
+        height: 240px;
     }
 
     .project-title {
-        font-size: 0.8rem;
+        font-size: var(--t0);
     }
 
-    .project-tag {
-        margin-top: 2rem;
-        font-size: 0.8rem;
+    .project-tag, .project-student {
+        font-size: var(--t1d);
     }
+}
 
-    .project-student {
-        margin-top: 0.5rem;
-        font-size: 0.8rem;
-    }
-
-    .project-img {
-        height: 230px;
-    }
+@media only screen and (min-width: 1024px) {
+  
 }
 
 @media only screen and (min-width: 1200px) {
     .main-container {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-gap: var(--spacing);
     }
 
-    .project-title {
-        font-size: 1.2rem;
+    .project {
+        margin-bottom: 0; /* Handled by grid-gap. */
     }
+
+    .project-img {
+        height: 368px;
+    }
+
 }
-
-/* QHD Monitors */
-@media only screen and (min-width: 2560px) {
-    main {
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-
 
 
 

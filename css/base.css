@@ -1,58 +1,3 @@
-/**************** Type ****************/
-
-body {
-    font-weight: 500;
-}
-  
-p {
-    font-size: 0.833rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-h1 {
-    margin-top: 0;
-    font-size:  1.44rem;
-}
-
-h2 {
-    font-size: 1rem;
-}
-
-@font-face {
-    font-family: Gopher-Bold;
-    src: url(./../fonts/Gopher-Bold.ttf) format("ttf"),
-         url(./../fonts/Gopher-Bold.woff) format("woff"),
-         url(./../fonts/Gopher-Bold.woff2) format("woff2");
-    font-weight: bold;
-}
-
-/**************** Hover.css ****************/
-/* (https://ianlunn.github.io/Hover/) */
-
-.hvr-grow-rotate {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
-    -webkit-transform: scale(1.25) rotate(-5deg);
-    transform: scale(1.25) rotate(-5deg);
-}
-
 /**************** Variables ****************/
 
 :root {
@@ -66,15 +11,52 @@ h2 {
 
     --spacing: 1.2rem;
 
-    --big: 2.986rem;
-    --bigger: 3.583rem;
-    --biggest: 4.3rem;
+    /* Minor Third Scale                                                             */
+    /* Number denotes level, u and d denote upward or downward along the type scale. */ 
+
+    --t3d: 0.579rem;
+    --t2d: 0.694rem;
+    --t1d: 0.833rem;
+    --t0: 1rem;
+    --t1u: 1.2rem;
+    --t2u: 1.44rem;
+    --t3u: 1.728rem;
+    --t4u: 2.074rem;
+    --t5u: 2.488rem;
+    --t6u: 2.986rem;
+    --t7u: 3.583rem;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
     :root {
-        --spacing: 2.488rem;
+        --spacing: 1.728rem;
     }
+}
+
+/**************** Type ****************/
+
+body {
+    font-weight: 500;
+}
+  
+p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+@font-face {
+    font-family: Gopher-Bold;
+    src: url(./../fonts/Gopher-Bold.ttf) format("ttf"),
+         url(./../fonts/Gopher-Bold.woff) format("woff"),
+         url(./../fonts/Gopher-Bold.woff2) format("woff2");
+    font-weight: bold;
 }
 
 /**************** Globals ****************/
@@ -153,7 +135,7 @@ html {
         border-bottom: 3px solid black;
     }
 
-    border-nobottom-l {
+    .border-nobottom-l {
         border-bottom-width: 0;
     }
 }
@@ -206,12 +188,14 @@ img {
 /**************** Layout ****************/
 
 html {
-    height: calc((var(--vh, 1vh) * 100) - (2*var(--spacing)));
+    height: 100vh - (2*var(--spacing));
+    height: calc((100vh - var(--vh-offset, 0px)) - (2*var(--spacing)));
     padding: var(--spacing);
 }
 
 body {
-    height: calc((var(--vh, 1vh) * 100) - (2*var(--spacing)));
+    height: 100vh - (2*var(--spacing));
+    height: calc((100vh - var(--vh-offset, 0px)) - (2*var(--spacing)));
     margin: 0;
     padding: 0;
     font-family: Montserrat;
@@ -234,29 +218,25 @@ header {
 .header__block h1 {
     font-family: 'Gopher-Bold';
     text-transform: uppercase;
-    font-size: 2.074rem;
+    font-size: var(--t3u);
     margin: 0;
+    color: black;
 }
 
 .header__block, #marquee {
     padding: var(--spacing);
     padding-left: var(--spacing);
     padding-right: var(--spacing);
+    font-size: var(--t1d);
+    color: white;
+    font-family: 'Gopher-Bold';
+    width: 100%;
 }
 
 nav {
     padding: var(--spacing);
 }
 
-#marquee {
-    flex-shrink: 0;
-    flex-grow: 1;
-    display: grid;
-    place-items: start;
-    font-size: 0.694rem;
-    color: white;
-    font-family: 'Gopher-Bold';
-}
 
 /****** Nav ******/
 
@@ -275,7 +255,7 @@ nav > ul {
 }
 
 nav > ul > li {
-    font-size: 0.833rem;
+    font-size: var(--t3d);
 }
 
 nav > ul > li:first-child {
@@ -284,15 +264,6 @@ nav > ul > li:first-child {
 
 nav > ul > li:last-child {
     margin-right: 0;
-}
-
-.spacer {
-    height: 50px;
-    flex-shrink: 0;
-}
-
-.spacer--grow {
-    flex-grow: 1;
 }
 
 #logo {
@@ -306,7 +277,24 @@ main {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+@media only screen and (min-width: 375px) {
+    .header__block h1 {
+        font-size: var(--t4u);
+    }
+
+    .header__block h2 {
+        font-size: var(--t1);
+    }
+
+    nav > ul > li {
+        font-size: var(--t2d);
+    }
+}
+
 @media only screen and (min-width: 768px) {
+
+    /**************** Layout ****************/
 
     body {
         display: grid;
@@ -345,30 +333,10 @@ main {
         align-items: flex-start;
     }
 
-    nav > ul > li {
-        font-size: 1.2rem;
-        margin: 0.579rem 0;
-    }
-
     nav > ul > li:first-child {
         margin-top: 0;
     }
-
-    .spacer {
-        display: none;
-    }
-
-    #title {
-        width: 300px;
-        flex: 0 1 300px;
-        font-size: 2rem;
-        padding: 0;
-    }
-
-    #marquee {
-        font-size: 0.833rem;
-    }
-
+    
     #logo {
         margin-top: 10rem;
         display: block;
@@ -384,7 +352,31 @@ main {
         grid-row: 2/3;
         grid-column: 2 / 3;
     }
+
+    /**************** Type ****************/
+    #marquee {
+        font-size: var(--t1);
+    }
+
+    nav > ul > li {
+        font-size: var(--t1u);
+        margin-bottom: var(--t1u);
+    }
+
+    nav > ul > li:last-child {
+        margin-bottom: 0;
+    }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1600px) {
+
+    .box {
+        display: block;
+    }
+
+    .quicklink > a {
+        font-size: var(--biggest);
+    }
 }
+
+
