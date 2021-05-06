@@ -188,14 +188,14 @@ img {
 /**************** Layout ****************/
 
 html {
-    height: 100vh - (2*var(--spacing));
-    height: calc((100vh - var(--vh-offset)) - (2*var(--spacing)));
+    height: calc(100vh - (2*var(--spacing)));
+    /* height: calc((100vh - var(--vh-offset)) - (2*var(--spacing))); */
     padding: var(--spacing);
 }
 
 body {
-    height: 100vh - (2*var(--spacing));
-    height: calc((100vh - var(--vh-offset)) - (2*var(--spacing)));
+    height: calc(100vh - (2*var(--spacing)));
+    /* height: calc((100vh - var(--vh-offset)) - (2*var(--spacing))); */
     margin: 0;
     padding: 0;
     font-family: Montserrat;
