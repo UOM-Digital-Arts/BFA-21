@@ -21,7 +21,6 @@ header {
 .header__subtitle {
     padding: var(--spacing);
     font-size: 0.833rem;
-    color: white;
     font-family: 'Gopher-Bold';
     width: 100%;
 }
@@ -50,7 +49,6 @@ nav > ul > li {
 
 @media only screen and (min-width: 768px) {
 
-    
     header {
         flex-direction: row;
         grid-area: header;
