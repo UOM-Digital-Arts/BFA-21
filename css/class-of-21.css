@@ -1,8 +1,12 @@
+.filter__container {
+}
+
 .filter {
     display: flex;
     align-items: center;
     border: none;
     outline: none;
+    
 }
 
 .filter > input {
@@ -14,6 +18,7 @@
     font-style: italic;
     outline: none;
     border: none;
+    z-index: 1;
 }
 
 .filter > textarea:focus, .filter > input:focus {
@@ -173,7 +178,7 @@ main > ul > a {
 
     .class {
         display: grid;
-        grid-template-columns: repeat(2, max-content);
+        grid-template-columns: repeat(2, 1fr375);
         grid-gap: var(--spacing);
     }
 

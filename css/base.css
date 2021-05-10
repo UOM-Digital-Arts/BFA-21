@@ -27,6 +27,8 @@
     --t6u: 2.986rem;
     --t7u: 3.583rem;
     --t8u: 4.3rem;
+
+    --animate-delay:0.25s
 }
 
 @media only screen and (min-width: 768px) {
@@ -229,6 +231,23 @@ body {
     font-weight: 500;
     display: flex;
     flex-direction: column;
+}
+
+footer {
+    width: 100%;
+    padding: var(--spacing);
+    font-size: 0.833rem;
+    color: var(--red);
+    font-family: 'Gopher-Bold';
+}
+
+.footer--right {
+    display: flex;
+    justify-content: flex-end
+}
+
+a.a--footer {
+    color: var(--red);
 }
 
 @media only screen and (min-width: 768px) {

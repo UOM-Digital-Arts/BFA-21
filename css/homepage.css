@@ -32,13 +32,6 @@ main {
     
 }
 
-footer {
-    padding: var(--spacing);
-    font-size: 0.833rem;
-    color: var(--red);
-    font-family: 'Gopher-Bold';
-}
-
 @media only screen and (min-width: 768px) {
 
     main {
@@ -46,11 +39,6 @@ footer {
         display: flex;
         flex-direction: column;
     }
-
-    footer {
-        grid-area: footer;
-    }
-
 }
 
 @media only screen and (min-width: 1200px) {

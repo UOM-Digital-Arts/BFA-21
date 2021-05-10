@@ -3,10 +3,10 @@
 main {
     margin: 0;
     padding: 0;
-}
-
-.main-container {
     padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .project {
@@ -35,51 +35,52 @@ a.project {
 .project-info {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing);
+    justify-content: center;
 }
 
 .project-title {
     font-family: 'Gopher-Bold';
-    font-size: var(--t1d);
-    margin-bottom: var(--t0);
+    font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
+    padding: var(--spacing);
 }
 
 .project-tag {
-    font-size: var(--t2d);
+    font-size: clamp(0.694rem, 0.6308rem + 0.2696vw, 0.833rem);
+    padding: var(--spacing) 0 0 var(--spacing);
 }
 
 .project-student {
-    font-size: var(--t2d);
-    margin-top: 0.25rem;
+    font-size: clamp(0.694rem, 0.6308rem + 0.2696vw, 0.833rem);;
+    margin-top: 0.21rem;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 0 0 var(--spacing) var(--spacing);
 }
 
 /************ Breakpoints ************/
+
+@media only screen and (min-width: 456px) and (max-width: 767px) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: var(--spacing);
+    }
+}
+
 
 @media only screen and (min-width: 768px) {
 
     .project-img {
         height: 240px;
     }
-
-    .project-title {
-        font-size: var(--t0);
-    }
-
-    .project-tag, .project-student {
-        font-size: var(--t1d);
-    }
 }
 
-@media only screen and (min-width: 1024px) {
-  
-}
 
-@media only screen and (min-width: 1200px) {
-    .main-container {
+@media only screen and (min-width: 1116px) {
+    main {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: var(--spacing);
     }
 
@@ -90,7 +91,14 @@ a.project {
     .project-img {
         height: 368px;
     }
+}
 
+@media only screen and (min-width: 1400px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: var(--spacing);
+    }
 }
 
 
