@@ -155,19 +155,25 @@ main > ul > a {
     }
 
     .class {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: var(--spacing);
+        justify-items: start;
     }
 
     .class__student {
         margin-bottom: 0; /* Handled by grid-gap. */
-        width: max-content;
-        margin-right: var(--spacing);
     }
 
     .class__student > picture, .class__student > picture > img {
         width: 150px;
         height: 150px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .class {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

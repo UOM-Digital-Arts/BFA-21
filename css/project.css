@@ -112,7 +112,6 @@ main {
 .main__project-images, .main__project-videos {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing);
     padding: var(--spacing);
     cursor: default;
 }
@@ -127,11 +126,15 @@ main {
     cursor: pointer;
 }
 
-
 .iframe__container {
     position: relative;
     width: 100%;
     padding: 70% 0 0 0;
+    margin-bottom: var(--spacing);
+}
+
+.iframe__container:last-child {
+    margin-bottom: 0;
 }
 
 iframe {

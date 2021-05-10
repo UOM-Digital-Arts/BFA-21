@@ -56,14 +56,12 @@ a.project {
 }
 
 @media only screen and (min-width: 456px) and (max-width: 767px) {
-
     main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: var(--spacing);
     }
 }
-
 
 @media only screen and (min-width: 768px) {
 

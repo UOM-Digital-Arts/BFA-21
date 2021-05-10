@@ -30,6 +30,7 @@ nav {
 }
 
 nav > ul {
+    font-family: 'Gopher-Bold';
     padding: 0;
     margin: 0;
     display: flex;
@@ -40,7 +41,7 @@ nav > ul {
 
 nav > ul > li {
     font-size: clamp(0.579rem, 0.2967rem + 1.2044vw, 1.2rem);
-    padding-right: var(--t3d);
+    margin-right: 0.539rem;
 }
 
 #logo {
@@ -113,10 +114,6 @@ nav > ul > li {
     #logo img {
         height: 100px;
         width: 100px;
-    }
-
-    #marquee {
-        font-size: var(--t1);
     }
 
     nav > ul > li:last-child {
