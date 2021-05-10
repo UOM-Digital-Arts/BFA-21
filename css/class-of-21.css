@@ -3,7 +3,6 @@
     align-items: center;
     border: none;
     outline: none;
-    
 }
 
 .filter > input {
@@ -46,13 +45,10 @@
     opacity: 1;
 }
 
-/**************** Student ****************/
-
 .class {
     padding: var(--spacing);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing);
 }
 
 .class__student {
@@ -60,6 +56,11 @@
     justify-content: flex-start;
     position: relative;
     height: min-content;
+    margin-bottom: var(--spacing);
+}
+
+.class__student:last-child {
+    margin-bottom: 0;
 }
 
 .class__student > picture, .class__student > picture > img {
@@ -141,16 +142,13 @@ main > ul > a {
     font-size: 0.833rem;
 }
 
-#class-list .main-container {
-    border: 0;
-}
-
 @media only screen and (min-width: 1200px) {
 
     .filter {
         width: 100%;
         height: auto;
         display: grid;
+        grid-gap: var(--spacing);
         align-items: center;
         flex-grow: 0;
         flex-shrink: 0;
@@ -159,12 +157,12 @@ main > ul > a {
     .class {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: var(--spacing);
     }
 
     .class__student {
         margin-bottom: 0; /* Handled by grid-gap. */
         width: max-content;
+        margin-right: var(--spacing);
     }
 
     .class__student > picture, .class__student > picture > img {

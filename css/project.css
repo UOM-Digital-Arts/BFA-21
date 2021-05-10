@@ -58,15 +58,14 @@ main {
     margin-left: var(--spacing);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 0.512rem;
+    justify-content: center
 }
 
 .profile__name {
     margin-top: 0;
     font-size: clamp(1.2rem, 0.6145rem + 2.4979vw, 2.488rem);
     font-family: 'Gopher-Bold';
-    margin-bottom: 0;
+    margin-bottom: 0.539rem;
 }
 
 .profile__personal-website {
@@ -75,11 +74,15 @@ main {
 }
 
 .profile__socials {
+    margin-top: 0.539rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.512rem;
     justify-content: flex-start;
     align-items: center;
+}
+
+.profile__socials a {
+    margin-right: 0.539rem;
 }
 
 .profile__socials a img {
@@ -141,21 +144,7 @@ iframe {
     height: 100%;
 }
 
-
 @media only screen and (min-width: 1400px) {
-
-    .profile__name {
-        font-size: 2rem;
-    }
-
-    .project__title {
-        font-size: 1.5rem;
-        padding-right: 10rem;
-    }
-
-    .project__tag {
-        font-size: 0.8rem;
-    }
 
     .project__bio {
         margin-right: 22.737rem;

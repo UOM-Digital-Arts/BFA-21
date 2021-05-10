@@ -9,7 +9,7 @@ main {
 
 .headline p {
     padding: var(--spacing);
-    font-size: clamp(1.2rem, 0.6145rem + 2.4979vw, 2.488rem);
+    font-size: clamp(0.833rem, 0.2689rem + 2.4068vw, 2.074rem);
     font-family: 'Gopher-Bold';
     display: flex;
     justify-content: center;

@@ -11,22 +11,8 @@
 
     --spacing: 1.2rem;
 
-    /* Minor Third Scale                                                             */
-    /* Number denotes level, u and d denote upward or downward along the type scale. */ 
-    /* 0.579rem = 375px and below; 4.3rem = 1600px and above */
-
-    --t3d: 0.579rem;
-    --t2d: 0.694rem;
-    --t1d: 0.833rem;
-    --t0: 1rem;
-    --t1u: 1.2rem;
-    --t2u: 1.44rem;
-    --t3u: 1.728rem;
-    --t4u: 2.074rem;
-    --t5u: 2.488rem;
-    --t6u: 2.986rem;
-    --t7u: 3.583rem;
-    --t8u: 4.3rem;
+    --bw: 3px;
+    --bw-l: 4px;
 
     --animate-delay:0.25s
 }
@@ -37,51 +23,12 @@
     }
 }
 
-/**************** Type ****************/
-
-body {
-    font-weight: 500;
-}
-  
-p {
-    margin-bottom: 1rem;
-    line-height: 1.5;
-}
-
-h1, h2, h3, h4, h5 {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-
 @font-face {
     font-family: Gopher-Bold;
     src: url(./../fonts/Gopher-Bold.ttf) format("ttf"),
          url(./../fonts/Gopher-Bold.woff) format("woff"),
          url(./../fonts/Gopher-Bold.woff2) format("woff2");
     font-weight: bold;
-}
-
-/**************** Globals ****************/
-
-:root {
-    --bw: 3px;
-    --bw-l: 4px;
-}
-
-html {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-}
-
-body {
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: var(--spacing);
-    background-color: white;
 }
 
 *,
@@ -97,6 +44,25 @@ body {
 ::selection {
     background-color: var(--red);
     color: white;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: var(--spacing);
+    background-color: white;
+    font-family: Montserrat;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
 }
 
 .border {
@@ -175,8 +141,16 @@ body {
 }
 
 p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 ul, li {
@@ -197,25 +171,10 @@ a.current-link {
     color: var(--link);
 }
 
-a.back, a.back:visited {
-    padding: var(--spacing);
-    color: white;
-    background-color: var(--primary);
-    text-transform: uppercase;
-    display: block;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-}
-
 img {
     display: block;
     margin: 0;
     padding: 0;
-}
-
-.pink {
-    background-color: var(--pink);
 }
 
 .primary {
@@ -226,12 +185,6 @@ img {
     background-color: var(--secondary);
 }
 
-body {
-    font-family: Montserrat;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-}
 
 footer {
     width: 100%;
@@ -252,8 +205,6 @@ a.a--footer {
 
 @media only screen and (min-width: 768px) {
 
-    /**************** Layout ****************/
-
     body {
         display: grid;
         grid-template: auto 1fr auto / 300px 1fr;
@@ -271,7 +222,5 @@ a.a--footer {
     footer {
         grid-area: footer;
     }
-
-    /**************** Type ****************/
 }
 
