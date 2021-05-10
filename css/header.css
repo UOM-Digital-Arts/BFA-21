@@ -56,7 +56,23 @@ nav > ul > li {
 
     .header__title {
         flex: 0 0 300px;
-        background: var(--yellow);
+        background-color: black;
+    }
+
+    .header__title--primary {
+        background-color: var(--primary);
+    }
+
+    .header__title--pink {
+        background-color: var(--pink);
+    }
+
+    .header__title--yellow {
+        background-color: var(--yellow);
+    }
+
+    .header__title--blue {
+        background-color: var(--blue);
     }
 
     .header__title h1{

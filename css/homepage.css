@@ -3,6 +3,10 @@ main {
     flex-direction: column;
 }
 
+.headline {
+    background-color: var(--primary);
+}
+
 .headline p {
     padding: var(--spacing);
     font-size: clamp(1.2rem, 0.6145rem + 2.4979vw, 2.488rem);
@@ -10,9 +14,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
-    color: white;
-    
+    color: white; 
 }
 
 .major-link {
@@ -30,16 +32,11 @@ main {
     
 }
 
-.footer__contribution {
+footer {
     padding: var(--spacing);
     font-size: 0.833rem;
     color: var(--red);
     font-family: 'Gopher-Bold';
-}
-
-.footer__classlist {
-    padding: var(--spacing);
-    font-size: 0.694rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -67,7 +64,16 @@ main {
     }
 
     .box--colored {
-        background-color: var(--secondary);
+        background-color: black;
+    }
+
+    .headline {
+        display: grid;
+        place-items: center;
+    }
+
+    .headline p {
+        text-align: center;
     }
 }
 

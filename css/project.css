@@ -1,21 +1,18 @@
-.main__wrapper {
+main {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    position: relative;
 }
 
-.main__wrapper__info {
+.main__info {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
     padding: var(--spacing);
 }
 
 .profile {
     display: flex;
     flex: 1 0 150px;
-}
-
-.profile__name {
-    align-self: center;
 }
 
 .profile > picture, .profile > picture > img {
@@ -57,47 +54,71 @@
     }
 }
 
-.profile__name {
-    font-size: var(--t2u);
+.profile__about {
     margin-left: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.512rem;
+}
+
+.profile__name {
+    margin-top: 0;
+    font-size: clamp(1.2rem, 0.6145rem + 2.4979vw, 2.488rem);
     font-family: 'Gopher-Bold';
     margin-bottom: 0;
 }
 
+.profile__personal-website {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.579rem, 0.3876rem + 0.8165vw, 1rem);
+}
+
+.profile__socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.512rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile__socials a img {
+    width: 16px;
+    height: 16px;
+}
+
 .project {
-    flex-shrink: 1;
+    padding: var(--spacing);
 }
 
 .project__title {
     font-family: 'Gopher-Bold';
-    margin-top: var(--spacing);
-    font-size: 1rem;
-    padding-right: calc(2*var(--spacing));
-    margin-bottom: 0.233rem;
+    font-size: clamp(0.833rem, 0.4262rem + 1.7358vw, 1.728rem);
 }
 
 .project__tag {
-    font-size: var(--t2d);
-    margin-bottom: var(--spacing);
+    font-size: clamp(0.579rem, 0.3876rem + 0.8165vw, 1rem);
 }
 
 .project__bio {
-    font-size: var(--t1d);
+    margin-top: calc(0.5*var(--spacing));
+    font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
 }
 
-.project-images {
+.main__project-images {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
     padding: var(--spacing);
+    cursor: default;
 }
 
-.project-images > picture, .project-images > picture > img {
+.main__project-images > picture, .main__project-images > picture > img {
     width: 100%;
     height: auto;
-    padding-bottom: var(--spacing)
+    cursor: pointer;
 }
 
-.project-images > picture:last-child, .project-images > picture > img:last-child {
-    padding-bottom: 0;
-}
 
 .iframe__container {
     position: relative;
@@ -118,17 +139,6 @@ iframe {
 
 
 @media only screen and (min-width: 1200px) {
-    main {
-        flex-direction: row;
-    }
-
-    .main__wrapper {
-        flex-direction: row;
-    }
-
-    .main__wrapper__info {
-        width: 40%;
-    }
 
     .profile__name {
         font-size: 2rem;
@@ -143,33 +153,8 @@ iframe {
         font-size: 0.8rem;
     }
 
-    .project__bio {
-        font-size: 1rem;
-        padding-right: 10rem;
-    }
-
-    .project-images {
-        height: 100%;
-    }
-    
-    .main__wrapper__info {
-        border-right: 5px solid black;
-    }
-
-    .project {
-        border: none;
-    }
-    
-    .project-images {
-        width: 60%;
-    }
-
-    .project-images > picture, .project-images > picture > img {
+    .main__project-images > picture, .main__project-images > picture > img {
         width: 100%;
         height: auto
-    }
-
-    .project-images > picture:last-child > img {
-        margin-bottom: 2.5rem;
     }
 }

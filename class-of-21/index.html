@@ -6,40 +6,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/class-of-21.css">
     <title>Retrospect</title>
 </head>
 <body>
- 
-    <header>
-        <div class="header__block border"><h1>Retrospect</h1></div>
-        <div id="marquee" class="border border-notop-s border-nobottom-s border-noleft-l primary marquee"> UM BFA (Honours) Digital Arts</div>
+
+    <header class="border">
+        <div class="header__title border-bottom-s border-nobottom-l border-right-l header__title--primary"><h1>Retrospect</h1></div>
+        <div class="header__subtitle"> UM BFA (Honours) Digital Arts</div>
     </header>
 
-    <nav class="border border-notop-l">
+    <nav class="border border-notop-s border-notop-l border-noright-l">
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../projects/index.html">Projects</a></li>
+            <li><a href="../projects/">Projects</a></li>
             <li><a href="./index.html" class="current-link">Class of '21</a></li>
             <li>Sponsors</li>
             <li>BFA</li>
         </ul>
-        <a id="logo" href="./index.html"><img src="../logo.svg" alt=""></a>
+        <a id="logo" href="../index.html"><img src="../logo.svg" alt=""></a>
     </nav>
 
-    <!-- 
-        CSS' overflow and padding are bugged: https://nshki.com/fixing-overflow-padding-in-firefox/.
-        The .main-container adds an unnecessary DOM element; pedantically, it is not the cleanest fix
-        but it is an easy bypass to ensure visual consistency. 
-    -->
-
-    <main id="class-list" class="border border-notop-s border-notop-l border-noleft-l">
+    <main id="class-list" class="border border-notop-s border-notop-l">
         <div class="main-container">
             <form class="filter">
                 <input class="search" autocomplete="off" type="text" id="filter" name="filter" placeholder="Filter by name, field of work, et al.">
             </form>
             <ul class="list class border border-nobottom-s border-nobottom-l border-noleft-s border-noleft-l border-noright-s border-noright-l">
-                <a href="../shania-camenzuli/index.html" class="class__student">
+                <a href="../students/shania-camenzuli/index.html" class="class__student">
                     <picture>
                         <source srcset="../img/portraits/shaniacamenzuli-portrait-1.webp" type="image/webp">
                         <source srcset="../img/portraits/shaniacamenzuli-portrait-1.jpg" type="image/jpeg"> 
