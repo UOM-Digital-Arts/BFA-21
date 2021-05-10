@@ -63,10 +63,6 @@ footer {
         display: block;
     }
 
-    .box--colored {
-        background-color: black;
-    }
-
     .headline {
         display: grid;
         place-items: center;
