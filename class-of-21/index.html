@@ -32,7 +32,7 @@
 
     <main id="class-list" class="border border-notop-s border-ntop-l border-notop-l">
         <div class="filter__container">
-            <form class="filter">
+            <form class="filter search">
                 <input class="search" autocomplete="off" type="text" id="filter" name="filter" placeholder="Filter by name, field of work, et al.">
             </form>
         </div>
@@ -296,6 +296,14 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
+
+    <script>
+        let options = {
+            valueNames: [ 'studentName', 'studentTag' ]
+        };
+
+        let classList = new List('class-list', options);
+    </script>
 
 </body>
 </html>

@@ -93,19 +93,20 @@ main {
 
 .project__title {
     font-family: 'Gopher-Bold';
-    font-size: clamp(0.833rem, 0.4262rem + 1.7358vw, 1.728rem);
-}
-
-.project__tag {
-    font-size: clamp(0.579rem, 0.3876rem + 0.8165vw, 1rem);
-}
-
-.project__bio {
-    margin-top: calc(0.5*var(--spacing));
     font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
 }
 
-.main__project-images {
+.project__tag {
+    font-size: clamp(0.694rem, 0.6308rem + 0.2696vw, 0.833rem);
+    margin-top: 0.233rem;
+}
+
+.project__bio {
+    margin-top: 0.833rem;
+    font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
+}
+
+.main__project-images, .main__project-videos {
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
@@ -127,8 +128,7 @@ main {
 .iframe__container {
     position: relative;
     width: 100%;
-    padding: 69.59% 0 0 0;
-    margin-bottom: var(--spacing);
+    padding: 70% 0 0 0;
 }
 
 iframe {
@@ -142,7 +142,7 @@ iframe {
 }
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
 
     .profile__name {
         font-size: 2rem;
@@ -157,15 +157,13 @@ iframe {
         font-size: 0.8rem;
     }
 
-    .iframe__container {
-        position: relative;
-        width: 25%;
-        padding: 69.59% 0 0 0;
-        margin-bottom: var(--spacing);
-    }    
+    .project__bio {
+        margin-right: 22.737rem;
+    }
 
     .main__project-images {
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .main__project-images > picture {
