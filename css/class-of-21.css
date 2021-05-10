@@ -124,11 +124,6 @@
     padding-right: 0.402rem;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
-
 main > form {
     flex-shrink: 0;
     height: 30px;
@@ -176,20 +171,3 @@ main > ul > a {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
