@@ -123,6 +123,11 @@ main {
     width: 100%;
     padding-top: 56.25%;
     height: 0;
+    margin-bottom: var(--spacing);
+}
+
+.iframe__container:last-child {
+    margin-bottom: 0;
 }
 
 .iframe__container iframe {
