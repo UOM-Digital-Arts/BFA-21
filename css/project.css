@@ -61,19 +61,19 @@ main {
     justify-content: center
 }
 
-.profile__name {
+.profile__about__name {
     margin-top: 0;
     font-size: clamp(1.2rem, 0.6145rem + 2.4979vw, 2.488rem);
     font-family: 'Gopher-Bold';
     margin-bottom: 0.539rem;
 }
 
-.profile__personal-website {
+.profile__about__personal-website {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(0.579rem, 0.3876rem + 0.8165vw, 1rem);
 }
 
-.profile__socials {
+.profile__about__socials {
     margin-top: 0.539rem;
     display: flex;
     flex-wrap: wrap;
@@ -81,11 +81,11 @@ main {
     align-items: center;
 }
 
-.profile__socials a {
+.profile__about__socials a {
     margin-right: 0.539rem;
 }
 
-.profile__socials a img {
+.profile__about__socials a img {
     width: 16px;
     height: 16px;
 }
