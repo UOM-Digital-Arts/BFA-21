@@ -19,13 +19,9 @@ a.project {
     display: block;
 }
 
-.project-img {
-    height: 170px;
-}
-
 .project-img img {
-    height: 100%;
     width: 100%;
+    height: 170px;
     -o-object-fit: cover;
        object-fit: cover;
 }
@@ -45,6 +41,7 @@ a.project {
 .project-tag {
     font-size: clamp(0.694rem, 0.6308rem + 0.2696vw, 0.833rem);
     padding: var(--spacing) 0 0 var(--spacing);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .project-student {
@@ -81,7 +78,7 @@ a.project {
         margin-bottom: 0; /* Handled by grid-gap. */
     }
 
-    .project-img {
+    .project-img img {
         height: 368px;
     }
 }
