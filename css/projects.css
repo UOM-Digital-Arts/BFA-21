@@ -24,7 +24,7 @@ a.project {
     height: 170px;
     -o-object-fit: cover;
        object-fit: cover;
-    outline: none;
+    border-style: none;
 }
 
 .project-info {
