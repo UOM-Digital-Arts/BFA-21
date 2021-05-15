@@ -19,16 +19,12 @@ a.project {
     display: block;
 }
 
-picture {
-    background-color: black;
-}
-
 .project-img img {
     width: 100%;
     height: 170px;
     -o-object-fit: cover;
        object-fit: cover;
-    border-style: none;
+    background-color: black;
 }
 
 .project-info {
