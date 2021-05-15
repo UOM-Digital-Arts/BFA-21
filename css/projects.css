@@ -59,6 +59,11 @@ a.project {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: var(--spacing);
     }
+
+    .project {
+        margin-bottom: 0
+    }
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -66,6 +71,11 @@ a.project {
     .project-img {
         height: 240px;
     }
+
+    .project {
+        margin-bottom: var(--spacing);
+    }
+    
 }
 
 @media only screen and (min-width: 1116px) {
