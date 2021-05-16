@@ -27,13 +27,13 @@
 
     <nav class="border border-notop-s border-notop-l border-noright-l">
         <ul>
-            <li><a href="../../index.html" class="hvr-buzz-out">Home</a></li>
+            <li><a href="../../" class="hvr-buzz-out">Home</a></li>
             <li><a href="../../projects/" class="hvr-buzz-out current-link">Projects</a></li>
             <li><a href="../../class-of-21/" class="hvr-buzz-out">Class of '21</a></li>
             <li><a href="" class="hvr-buzz-out">Sponsors</a></li>
             <li><a href="" class="hvr-buzz-out">BFA</a></li>
         </ul>
-        <a id="logo" href="../../index.html"><img src="../..//logo.svg" alt=""></a>
+        <a id="logo" href="../../"><img src="../../logo.svg" alt=""></a>
     </nav>
 
     <main class="border border-notop-s border-notop-l">
@@ -50,11 +50,11 @@
                     <img src="../../img/portraits/stefanmuscat-portrait-2.jpg" alt="">
                 </picture>
                 <div class="profile__about">
-                    <h1 class="profile__name">Stefan Muscat</h1>
-                    <a href="http://stefanmuscat.com/" class="profile__personal-website">stefanmuscat.com</a>
+                    <h1 class="profile__about__name">Stefan Muscat</h1>
+                    <a href="http://stefanmuscat.com/" class="profile__about__personal-website" target="_blank">stefanmuscat.com</a>
                     <div class="profile__about__socials">
-                        <a href="http://instagram.com/stefanmuscat_/"><img src="../../img/socials/instagram.svg" alt="Instagram"></a>
-                        <a href="https://www.youtube.com/channel/UCAvcZ2ADRETVsQOX0XgHyTA/videos"><img src="../../img/socials/youtube.svg" alt="YouTube"></a>
+                        <a href="https://instagram.com/stefanmuscat_/" target="_blank"><img src="../../img/socials/instagram.svg" alt="Instagram"></a>
+                        <a href="https://youtube.com/channel/UCAvcZ2ADRETVsQOX0XgHyTA/videos" target="_blank"><img src="../../img/socials/youtube.svg" alt="YouTube"></a>
                     </div>
                 </div>
             </div>
@@ -66,28 +66,34 @@
                 <p>Stefan's project studies how emotion can be both portrayed and read—without the need of verbal or facial communication—in an animated puppet.</p>
             </div>
         </div>
-        <div class="main__project-videos border-bottom-s border-bottom-l">
+        <div class="main__project-videos">
             <figure class="iframe__container">
-                <iframe src="https://player.vimeo.com/video/548013068?color=999999&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                <iframe src="https://player.vimeo.com/video/548013068" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </figure>
             <figure class="iframe__container">
-                <iframe src="https://player.vimeo.com/video/548013068?color=999999&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                <iframe src="https://player.vimeo.com/video/548010923" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+            <figure class="iframe__container">
+                <iframe src="https://player.vimeo.com/video/547979963" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </figure>   
         </div>
         <div class="main__project-images">
-        <picture onclick="photoSwipe(0)">
-            <source srcset="../../img/projects/shaniacamenzuli/Artboard 1.png" type="image/jpeg">
-            <img src="../../img/projects/shaniacamenzuli/shaniacamenzuli-project-1.jpg" alt="">
-        </picture>
-        <picture onclick="photoSwipe(1)">
-            <source srcset="../../img/projects/shaniacamenzuli/Artboard 1.png" type="image/jpeg">
-            <img src="../../img/projects/shaniacamenzuli/shaniacamenzuli-project-1.jpg" alt="">
-        </picture>
-        <picture onclick="photoSwipe(2)">
-            <source srcset="../../img/projects/shaniacamenzuli/Artboard 1.png" type="image/jpeg">
-            <img src="../../img/projects/shaniacamenzuli/shaniacamenzuli-project-1.jpg" alt="">
-        </picture>
-    </div>
+            <picture onclick="photoSwipe(0)">
+                <source srcset="../../img/projects/stefanmuscat/stefanmuscat-project-1.webp" type="image/webp">
+                <source srcset="../../img/projects/stefanmuscat/stefanmuscat-project-1.jpg" type="image/jpeg">
+                <img src="../../img/projects/stefanmuscat/stefanmuscat-project-1.jpg" alt="">
+            </picture>
+            <picture onclick="photoSwipe(01)">
+                <source srcset="../../img/projects/stefanmuscat/stefanmuscat-project-2.webp" type="image/webp">
+                <source srcset="../../img/projects/stefanmuscat/stefanmuscat-project-2.jpg" type="image/jpeg">
+                <img src="../../img/projects/stefanmuscat/stefanmuscat-project-2.jpg" alt="">
+            </picture>
+            <picture onclick="photoSwipe(2)">
+                <source srcset="../../img/projects/stefanmuscat/stefanmuscat-project-3.webp" type="image/webp">
+                <source srcset="../../img/projects/stefanmuscat/stefanmuscat-project-3.jpg" type="image/jpeg">
+                <img src="../../img/projects/stefanmuscat/stefanmuscat-project-3.jpg" alt="">
+            </picture>
+        </div>
     </main>
 
     <footer class="border border-notop-s border-notop-l footer--right">
@@ -158,21 +164,18 @@
 
         // build items array
         let items = [
-
             {
-                src: '../../img/projects/shaniacamenzuli/shaniacamenzuli-project-1.png', // path to image
+                src: '../../img/projects/stefanmuscat/stefanmuscat-project-1.jpg', // path to image
                 w: 1080, // image width
                 h: 1080, // image height
             },
-
             {
-                src: '../../img/projects/shaniacamenzuli/shaniacamenzuli-project-2.png', 
+                src: '../../img/projects/stefanmuscat/stefanmuscat-project-2.jpg',
                 w: 1080,
                 h: 1080,
             },
-
             {
-                src: '../../img/projects/shaniacamenzuli/shaniacamenzuli-project-3.png', 
+                src: '../../img/projects/stefanmuscat/stefanmuscat-project-3.jpg',
                 w: 1080,
                 h: 1080,
             }
