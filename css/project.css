@@ -100,6 +100,7 @@ main {
 .project__bio {
     margin-top: 0.833rem;
     font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
+    margin-right: var(--spacing);
 }
 
 a.project__see-more {
