@@ -107,6 +107,7 @@ a.project__see-more {
     margin-top: 0.833rem;
     color: var(--red);
     text-decoration: underline;
+    font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
 }
 
 .main__project-images, .main__project-videos {
