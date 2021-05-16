@@ -68,7 +68,7 @@ main {
 }
 
 .profile__about__personal-website {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gopher-Bold';
     font-size: clamp(0.579rem, 0.3876rem + 0.8165vw, 1rem);
 }
 
@@ -118,6 +118,10 @@ a.project__see-more {
     cursor: default;
 }
 
+.main__project-videos {
+    padding-bottom: 0;
+}
+
 .iframe__container {
     position: relative;
     margin: 0;
@@ -157,7 +161,7 @@ a.project__see-more {
 @media only screen and (min-width: 1400px) {
 
     .project__bio {
-        margin-right: 22.737rem;
+        padding-right: 30%;
     }
 
     .main__project-videos {

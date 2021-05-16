@@ -36,7 +36,7 @@
             <li><a href="" class="hvr-buzz-out">Sponsors</a></li>
             <li><a href="" class="hvr-buzz-out">BFA</a></li>
         </ul>
-        <a id="logo" href="../../"><img src="../..//logo.svg" alt=""></a>
+        <a id="logo" href="../../"><img src="../../logo.svg" alt=""></a>
     </nav>
 
     <main class="border border-notop-s border-notop-l">
@@ -67,10 +67,10 @@
             <h2 class="project__title">Colour in Disney’s Animated Adaptations</h2>
             <div class="project__tag">3D Animation</div>
             <div class="project__bio">
-                <p><i>Qrempuċu u x-Xewk</i> brings back Trevor Zahra's characters to the screen in full colour with the latest digital tools.</p>
+                <p><i>Qrempuċu u x-Xewk</i> brings back Trevor Zahra's characters to the screen in full colour, using the latest digital tools.</p>
             </div>
         </div>
-        <div class="main__project-videos border-bottom-s border-bottom-l">
+        <div class="main__project-videos">
             <figure class="iframe__container">
                 <iframe src="https://www.youtube.com/embed/CLC98vH6Qxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure> 
@@ -111,7 +111,12 @@
                 <source srcset="../../img/projects/samwelborg/samwelborg-project-7.jpg" type="image/jpeg">
                 <img src="../../img/projects/samwelborg/samwelborg-project-7.jpg" alt="">
             </picture>
-    </div>
+            <picture onclick="photoSwipe(7)">
+                <source srcset="../../img/projects/samwelborg/samwelborg-project-8.webp" type="image/webp">
+                <source srcset="../../img/projects/samwelborg/samwelborg-project-8.jpg" type="image/jpeg">
+                <img src="../../img/projects/samwelborg/samwelborg-project-8.jpg" alt="">
+            </picture>
+        </div>
     </main>
 
     <footer class="border border-notop-s border-notop-l footer--right">
@@ -214,6 +219,11 @@
             },
             {
                 src: '../../img/projects/samwelborg/samwelborg-project-7.jpg',
+                w: 1080,
+                h: 810,
+            },
+            {
+                src: '../../img/projects/samwelborg/samwelborg-project-8.jpg',
                 w: 1080,
                 h: 810,
             }
