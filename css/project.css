@@ -181,10 +181,6 @@ a.project__see-more {
         padding-right: var(--spacing);
     }
 
-    .main__project-images > picture:nth-child(even) {
-        padding-right: 0;
-    }
-
     .main__project-images > picture:nth-last-child(2):not(:nth-child(even)) {
         padding-bottom: 0;
     }
