@@ -65,7 +65,6 @@ main {
     margin-top: 0;
     font-size: clamp(1.2rem, 0.6145rem + 2.4979vw, 2.488rem);
     font-family: 'Gopher-Bold';
-    margin-bottom: 0.539rem;
 }
 
 .profile__about__personal-website {
@@ -85,11 +84,6 @@ main {
     margin-right: 0.539rem;
 }
 
-.profile__about__socials a img {
-    width: 16px;
-    height: 16px;
-}
-
 .project {
     padding: var(--spacing);
 }
@@ -107,6 +101,13 @@ main {
 .project__bio {
     margin-top: 0.833rem;
     font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
+}
+
+a.project__see-more {
+    display: block;
+    margin-top: 0.833rem;
+    color: var(--red);
+    text-decoration: underline;
 }
 
 .main__project-images, .main__project-videos {
@@ -178,5 +179,9 @@ main {
 
     .main__project-images > picture:nth-child(even) {
         padding-right: 0;
+    }
+
+    .main__project-images > picture:nth-last-child(2):not(:nth-child(even)) {
+        padding-bottom: 0;
     }
 }
