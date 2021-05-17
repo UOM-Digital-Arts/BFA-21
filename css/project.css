@@ -183,7 +183,12 @@ a.project__see-more {
     }
 
     .main__project-images > picture {
-        padding-right: var(--spacing);
+        padding-right: calc(0.5*var(--spacing));
+    }
+
+    .main__project-images > picture:nth-child(even) {
+        padding-right: 0;
+        padding-left: calc(0.5*var(--spacing));
     }
 
     .main__project-images > picture:nth-last-child(2):not(:nth-child(even)) {
