@@ -64,8 +64,8 @@ main {
         place-items: center;
     }
 
-    .headline p {
-        text-align: center;
+    .headline {
+        border-left: var(--bw-l) solid black;
     }
 }
 
@@ -74,6 +74,7 @@ main {
         display: grid;
         grid-template: 1fr 1fr / 1fr 1fr;
     }
+
 }
 
 
