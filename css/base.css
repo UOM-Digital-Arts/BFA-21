@@ -21,8 +21,6 @@
     }
 }
 
-
-
 a, footer {
 
     /* Gopher Bold */
@@ -133,7 +131,7 @@ body {
         border-bottom-width: 0;
     }
 
-    .border-left {
+    .border-left-l {
         border-left: var(--bw-l) solid black;
     }
 
