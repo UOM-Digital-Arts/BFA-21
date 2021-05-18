@@ -16,9 +16,19 @@
 }
 
 .pswp__counter {
-    font-family: 'Gopher-Bold';
+        
+    /* Gopher Bold */
+    
+    font-family: gopher, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
 }
 
 .pswp__img--placeholder--blank {
     background-color: black;
 }
+
+.pswp--animate_opacity, .pswp__bg {
+    -webkit-transition: none;
+            transition: none; }

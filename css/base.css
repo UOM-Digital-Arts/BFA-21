@@ -21,12 +21,16 @@
     }
 }
 
-@font-face {
-    font-family: Gopher-Bold;
-    src: url(./../fonts/Gopher-Bold.ttf) format("ttf"),
-         url(./../fonts/Gopher-Bold.woff) format("woff"),
-         url(./../fonts/Gopher-Bold.woff2) format("woff2");
-    font-weight: bold;
+
+
+a, footer {
+
+    /* Gopher Bold */
+
+    font-family: gopher, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
 }
 
 *,
@@ -156,10 +160,6 @@ ul, li {
     padding: 0;
 }
 
-a {
-    font-family: 'Gopher-Bold';
-}
-
 a, a:visited {
     text-decoration: none;
     color: black;
@@ -187,7 +187,7 @@ img {
 footer {
     width: 100%;
     padding: var(--spacing);
-    font-size: 0.833rem;
+    font-size: clamp(0.579rem, 0.4635rem + 0.4926vw, 0.833rem);
     color: var(--red);
     font-family: 'Gopher-Bold';
 }

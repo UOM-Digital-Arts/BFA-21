@@ -1,3 +1,24 @@
+.project-title {
+
+       /* Gopher Bold */
+
+       font-family: gopher, sans-serif;
+       font-weight: 700;
+       font-style: normal;
+
+}
+
+.project-title--italic {
+
+    /* Gopher Bold Italic */
+
+    font-family: gopher, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    
+}
+
+
 main {
     margin: 0;
     padding: 0;
@@ -27,14 +48,7 @@ a.project {
     background-color: black;
 }
 
-.project-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .project-title {
-    font-family: 'Gopher-Bold';
     font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
     padding: var(--spacing);
 }
@@ -43,10 +57,10 @@ a.project {
     font-size: clamp(0.694rem, 0.6308rem + 0.2696vw, 0.833rem);
     padding: var(--spacing) 0 0 var(--spacing);
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 .project-student {
-    font-family: 'Gopher-Bold';
     font-size: clamp(0.694rem, 0.6308rem + 0.2696vw, 0.833rem);
     margin-top: 0.233rem;
     font-weight: bold;

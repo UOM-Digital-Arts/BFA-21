@@ -1,3 +1,13 @@
+.header__title h1, .header__subtitle, nav > ul {
+
+    /* Gopher Bold */
+
+    font-family: gopher, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
 .box {
     display: none;
 }
@@ -11,7 +21,6 @@ header {
 
 .header__title h1 {
     padding: var(--spacing);
-    font-family: 'Gopher-Bold';
     text-transform: uppercase;
     font-size: 1.728rem;
     margin: 0;
@@ -21,7 +30,6 @@ header {
 .header__subtitle {
     padding: var(--spacing);
     font-size: 0.833rem;
-    font-family: 'Gopher-Bold';
     width: 100%;
 }
 
@@ -30,7 +38,6 @@ nav {
 }
 
 nav > ul {
-    font-family: 'Gopher-Bold';
     padding: 0;
     margin: 0;
     display: flex;

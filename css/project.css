@@ -1,3 +1,23 @@
+.profile__about__name, .profile__about__personal-website, .project__title {
+    
+       /* Gopher Bold */
+
+       font-family: gopher, sans-serif;
+       font-weight: 700;
+       font-style: normal;
+
+}
+
+.project__title--italic {
+        
+       /* Gopher Bold */
+
+       font-family: gopher, sans-serif;
+       font-weight: 700;
+       font-style: italic;
+
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -63,11 +83,13 @@ main {
 .profile__about__name {
     margin-top: 0;
     font-size: clamp(1.2rem, 0.6145rem + 2.4979vw, 2.488rem);
-    font-family: 'Gopher-Bold';
+    font-weight: 700;
+    font-style: normal;;
 }
 
 .profile__about__personal-website {
-    font-family: 'Gopher-Bold';
+    font-weight: 700;
+    font-style: normal;
     font-size: clamp(0.579rem, 0.3876rem + 0.8165vw, 1rem);
 }
 
@@ -88,7 +110,7 @@ main {
 }
 
 .project__title {
-    font-family: 'Gopher-Bold';
+    font-style: normal;
     font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
 }
 
@@ -98,8 +120,9 @@ main {
 }
 
 .project__bio {
-    margin-top: 0.833rem;
+    margin-top: 1.2rem;
     font-size: clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem);
+    line-height: calc(1.75*(clamp(0.833rem, 0.7571rem + 0.3239vw, 1rem)));
     margin-right: var(--spacing);
 }
 
